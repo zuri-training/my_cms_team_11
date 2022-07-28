@@ -1,0 +1,472 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: pink;
+  padding: 20px;
+}
+
+.Go {
+  color: white;
+
+}
+
+.nav-items {
+  list-style-type: none;
+}
+
+.nav-items li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+  margin: 10px 20px;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.hero-text {
+  text-align: center;
+  color: red;
+  margin-bottom: 10px;
+}
+
+.hero-text h1{
+  margin-bottom: 20px;
+}
+
+.hero-image img {
+  width: 100%;
+}
+
+.btn {
+  background-color: pink;
+  color: red;
+  padding: 20px 80px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+}
+
+.card-container {
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.cards {
+  padding: 40px 80px;
+  background-color: pink;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  color: red;
+  text-align: center;
+  width: 100%;
+}
+
+.cards h2 {
+  margin-bottom: 20px;
+}
+
+.test-container {
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.testimonials img {
+  border-radius: 30px;
+}
+
+.testimonials {
+  text-align: center;
+  color: red;
+}
+
+.testimonials h3 {
+  margin-top: 10px;
+}
+
+.action-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  background-color: #323232;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+form {
+  padding: 40px;
+  color: red;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 18px 18px 0 rgba(0, 0, 0, 0.4);
+  background-color: pink;
+}
+
+form h3 {
+  margin-bottom: 20px;
+  text-decoration: underline;
+
+}
+
+
+#submit {
+  border-radius: 50px;
+  padding: 10px 40px;
+  color: pink;
+  background-color: red;
+  margin-top: 10px;
+
+}
+
+input,
+select,
+textarea {
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 600px;
+  outline: none;
+
+
+
+
+}
+
+.register-container {
+  box-shadow: 0 18px 18px 0 rgba(0, 0, 0, 0.4);
+  padding: 2.5rem 2.5rem;
+  border-radius: 10px;
+  width: 600px;
+  margin: 20px 40px;
+  display: block;
+  padding-bottom: 10px;
+  border: none;
+  color: red;
+  background-color: pink;
+
+}
+
+.register-container h3 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+
+ button {
+  margin-top: 20px;
+  width: 100%;
+  background-color: red;
+  color: pink;
+  border: none;
+  outline: none;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#reg-p {
+  color: red;
+  text-decoration: underline;
+  text-align: center;
+  line-height: 20px;
+}
+
+::placeholder,
+#Gender,
+#country,
+#state {
+  color: black;
+  font-size: small
+}
+
+.container-signin {
+  margin-top: 10px;
+}
+
+.footer-container {
+background-color: #fff;
+}
+
+.socials a {
+  padding: 5px 10px 10px 5px;
+  margin-bottom: 80px;
+
+}
+
+.footer-container{
+text-align: center;
+background-color: pink;
+margin-top: 20px;
+
+}
+
+small{
+  color:red;
+}
+
+/* Mobile responsiveness */
+@media screen and (min-device-width : 320px) and (max-device-width : 480px){
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .btn {
+    top: 80%;
+    left: 35%;
+  }
+
+  .cards-container {
+    padding: 20px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-image{
+    width:100%;
+  }
+
+
+  .hero-text {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .hero-text h1,
+  p {
+    margin-bottom: 20px;
+  }
+
+  .testimonials img {
+    border-radius: 80%;
+  }
+
+  .testimonials {
+    text-align: center;
+  }
+
+  .action-container {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  form {
+    margin-bottom: 10px;
+  }
+
+  .register-container {
+     width: 100%;
+  }
+
+
+  .footer-container{
+    text-align: center;
+    background-color: pink;
+    margin-top: 20px;
+
+    }
+
+}
+
+  /* Tablet responsiveness */
+@media screen and (min-device-width : 768px) and (max-device-width : 1200px) {
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .btn {
+    top: 80%;
+    left: 35%;
+  }
+
+  .cards-container {
+    padding: 20px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+   .hero-image{
+    width:100%;
+  }
+
+
+  .hero-text {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .hero-text h1,
+  p {
+    margin-bottom: 20px;
+  }
+
+  .testimonials img {
+    border-radius: 80%;
+  }
+
+  .testimonials {
+    text-align: center;
+  }
+
+  .action-container {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-container{
+    text-align: center;
+    background-color: pink;
+    margin-top: 20px;
+
+    }
+
+
+
+}
+
+@media screen and (min-width:1224px)and (max-width : 1440px) {
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .btn {
+    top: 80%;
+    left: 35%;
+  }
+
+  .cards-container {
+    padding: 20px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+  .hero-text {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .hero-text h1,
+  p {
+    margin-bottom: 20px;
+  }
+
+  .testimonials img {
+    border-radius: 80%;
+  }
+
+  .testimonials {
+    text-align: center;
+  }
+
+  .action-container {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  form {
+    margin-bottom: 10px;
+  }
+
+  .footer-container{
+    text-align: center;
+    background-color: pink;
+    margin-top: 20px;
+
+    }
+
+}
