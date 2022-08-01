@@ -8,8 +8,13 @@
 </head>
 <body>
     <h1>LOGIN PAGE</h1>
-    {{login_form}}
-    <a href="{% url 'password_reset'  %}">Forgot Password?</a>
+    <form method="post">
+        {% csrf_token %}
+        {{login_form}}
+    
+        <input type="submit" name="Login">
+    </form>
+    <a href="{% url 'reset_password'  %}">Forgot Password?</a>
 </body>
 </html>
 

@@ -8,6 +8,10 @@
 </head>
 <body>
     Registration PAGE
-    {{registration_form}}
+    <form method="post">
+        {% csrf_token %}
+        {{registration_form}}
+        <input type="submit" name="Send email">
+    </form>
 </body>
 </html>
