@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/fontawesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+    <link rel="stylesheet" href="./css/header_section.css">
+    <title>Webella || Homepage</title>
+</head>
+<body>
+    <header>
+        <!-- NAVIGATION -->
+        <!-- Desktop Navigation -->
+        <nav id="desktop-nav">
+            <div class="logo-wrapper">
+                <span>Webella</span>
+
+            </div>
+            
+            <div class="main-links "  id="main-links">
+
+                <ul>
+
+                    <li class="dropdown">
+                        <p class="dropdown-btn" onclick="dropFunction1()"> Templates <i class="fa fa-angle-down"></i></p>
+                        <div class="dropdown-content" id="dropdown-content1">
+                            <a href="#">Template 1</a>
+                            <a href="#">Template 2</a>
+                            <a href="#">Template 3</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <p class="dropdown-btn" onclick="dropFunction2()"> Products <i class="fa fa-angle-down"></i></p>
+                        <div class="dropdown-content" id="dropdown-content2">
+                            <a href="#">Product 1</a>
+                            <a href="#">Product 2</a>
+                            <a href="#">Product 3</a>
+                        </div>
+                    </li>
+                    <li class="support"><a href="#">Support</a></li>
+                </ul>
+
+                <div class="authentication">
+                    <a href="#">Sign up</a>
+                    <a href="#">Log In</a>
+                </div>
+            </div>
+
+
+            
+        </nav>
+
+
+       <!-- Mobile Navigation --> 
+        <nav class="mobile-nav navbar" id="navbar">
+            <div class="logo-wrapper">
+                <span>Webella</span>
+
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item dropdown">
+                    <!-- <a href="#" class="nav-link">Services</a> -->
+                    <p class="dropdown-btn" onclick="dropFunction1()"> Templates <i class="fa fa-angle-down"></i></p>
+                    <div class="dropdown-content" id="dropdown-content1">
+                        <a href="#" class="lnk">Template 1</a>
+                        <a href="#" class="lnk">Template 2</a>
+                        <a href="#" class="lnk">Template 3</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <!-- <a href="#" class="nav-link">Blog</a> -->
+                    <p class="dropdown-btn"onclick="dropFunction2()" > Products <i class="fa fa-angle-down" id="angle-down"></i></p>
+                    <div class="dropdown-content" id="dropdown-content2">
+                        <a href="#" class="lnk">Product 1</a>
+                        <a href="#" class="lnk">Product 2</a>
+                        <a href="#" class="lnk">Product 3</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <!-- <a href="#" class="nav-link">About</a> -->
+                    <li class="support lnk"><a href="#">Support</a></li>
+                </li>
+                <li class="nav-item">
+                    <!-- <a href="#" class="nav-link">Contact</a> -->
+                    <div class="authentication">
+                        <a href="#" class="lnk">Sign up</a>
+                        <a href="#" class="lnk">Log In</a>
+                    </div>
+                </li>
+            </ul>
+            
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav> 
+
+
+        <div class="hero-section">
+            <div class="hero-section-left">
+                <h1>
+                    Build <span>stunningly </span> professional <span>websites</span> for your business
+                </h1>
+
+                <p>
+                    Webella gives you the freedom to design, 
+                      create and manage your website exactly the way you imagine it to be
+                </p>
+
+                <a href=""> Create a Website <i class="fas fa-arrow-right" style="transform: rotate(-45deg);"></i></a>
+
+                <p class="try">Try Webella now. It's free</p>
+
+            </div>
+
+            <div class="hero-section-right">
+                <div class="hero-section-right-image-container">
+                    <img src="./images/hero-right-image.jpg" alt="">
+                </div>
+                <div class="bottom-line"></div>
+
+            </div>
+
+        </div>
+
+        <div class="below-hero-section">
+            <h2>
+                More Tools to Create and Manage Your Website Online
+            </h2>
+            <div class="main-box">
+                <div class="box box1">
+                    <div class="dot-box">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <p>Intuitive and Flexible Web and Content Editor</p>
+                </div>
+                <div class="box box2">
+                    <div class="top-box"></div>
+                    <div class="bottom-box"></div>
+                </div>
+                <div class="box box1">
+                    <div class="dot-box">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <p>Pre-made Templates</p>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+
+    <script src="./javascript/navbar.js"></script>
+
+</body>
+</html>
