@@ -34,14 +34,14 @@ def login_page(request):
 
             if user is not None:
                 login(request, user)
-                return redirect('webella:portal')
+                return redirect('webella:dashboard')
         else:
             context['login_form'] = login_form
 
     else:
         login_form = UserLoginForm()
         context['login_form'] = login_form
-
+ 
     return render(request, 'accounts/login.html', context)
 
 
