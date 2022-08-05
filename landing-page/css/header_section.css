@@ -42,9 +42,12 @@ nav{
 .logo-wrapper{
     flex: 30%;
     font-size: 30px;
-    color: #A1D9FF;
     text-shadow: 2px 2px 2px #000000;
     font-family: 'Black Han Sans', sans-serif;
+}
+
+.logo-wrapper a{
+    color: #A1D9FF;
 }
 
 /* Main Links Styles */
@@ -384,6 +387,9 @@ nav{
         transform: translateY(-8px) rotate(-45deg);
     }
 
+    .show{
+        display: block;
+    }
     /* Hero Section */
 
     /* Left Part */

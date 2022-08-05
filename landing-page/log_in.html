@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/fontawesome.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
     <link rel="stylesheet" href="./css/header_section.css">
+    <link rel="stylesheet" href="./css/authentication.css">
     <title>Webella || Homepage</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
         <!-- Desktop Navigation -->
         <nav id="desktop-nav">
             <div class="logo-wrapper">
-                <a href="#"><span>Webella</span></a>
+                <a href="./index.html"><span>Webella</span></a>
 
             </div>
             
@@ -44,7 +44,7 @@
 
                 <div class="authentication">
                     <a href="./sign_up.html">Sign up</a>
-                    <a href="./log_in.html">Log In</a>
+                    <a href="#">Log In</a>
                 </div>
             </div>
 
@@ -56,7 +56,7 @@
        <!-- Mobile Navigation --> 
         <nav class="mobile-nav navbar" id="navbar">
             <div class="logo-wrapper">
-                <a href="#"><span>Webella</span></a>
+                <a href="./index.html"><span>Webella</span></a>
 
             </div>
 
@@ -87,7 +87,7 @@
                     <!-- <a href="#" class="nav-link">Contact</a> -->
                     <div class="authentication">
                         <a href="./sign_up.html" class="lnk">Sign up</a>
-                        <a href="./log_in.html">Log In</a>
+                        <a href="#" class="lnk">Log In</a>
                     </div>
                 </li>
             </ul>
@@ -99,67 +99,43 @@
             </div>
         </nav> 
 
-
-        <div class="hero-section">
-            <div class="hero-section-left">
-                <h1>
-                    Build <span>stunningly </span> professional <span>websites</span> for your business
-                </h1>
-
-                <p>
-                    Webella gives you the freedom to design, 
-                      create and manage your website exactly the way you imagine it to be
-                </p>
-
-                <a href=""> Create a Website <i class="fas fa-arrow-right" style="transform: rotate(-45deg);"></i></a>
-
-                <p class="try">Try Webella now. It's free</p>
-
-            </div>
-
-            <div class="hero-section-right">
-                <div class="hero-section-right-image-container">
-                    <img src="./images/hero-right-image.jpg" alt="">
-                </div>
-                <div class="bottom-line"></div>
-
-            </div>
-
-        </div>
-
-        <div class="below-hero-section">
-            <h2>
-                More Tools to Create and Manage Your Website Online
-            </h2>
-            <div class="main-box">
-                <div class="box box1">
-                    <div class="dot-box">
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                    </div>
-                    <p>Intuitive and Flexible Web and Content Editor</p>
-                </div>
-                <div class="box box2">
-                    <div class="top-box"></div>
-                    <div class="bottom-box"></div>
-                </div>
-                <div class="box box1">
-                    <div class="dot-box">
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                    </div>
-                    <p>Pre-made Templates</p>
-                </div>
-            </div>
-        </div>
-
     </header>
+
+    <main>
+
+        <h1>Log In</h1>
+
+        <form action="">
+            <div>
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="name@example.com" required> 
+            </div>
+
+            <div class="password-container">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="password" required>
+                <i class="far fa-eye" id="togglePassword"></i> 
+            </div>
+
+            <div class="check">
+                <div>
+                    <input type="checkbox" name="remember-me" id=""> <span>Remeber me</span>
+                </div>
+                <span><a href="#" class="blue">Forgot Password?</a></span>
+            </div>
+
+            <input type="submit" value="Log In">
+        </form>
+
+        <p>Don't have an account?  <a href="./sign_up.html" class="blue">Sign Up</a></p>
+        <p>Logging into your account means you agree to our <a href="#" class="blue">Terms of Use</a> </p>
+
+    </main>
 
 
 
     <script src="./js/navbar.js"></script>
+    <script src="./js/showpassword.js"></script>
 
 </body>
-</html>
+</html
