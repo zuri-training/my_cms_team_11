@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+    <link rel="stylesheet" href="./css/header_section.css">
+    <link rel="stylesheet" href="./css/authentication.css">
+    <title>Webella || Homepage</title>
+</head>
+<body>
+    <header>
+        <!-- NAVIGATION -->
+        <!-- Desktop Navigation -->
+        <nav id="desktop-nav">
+            <div class="logo-wrapper">
+                <a href="./index.html"><span>Webella</span></a>
+
+            </div>
+            
+            <div class="main-links "  id="main-links">
+
+                <ul>
+
+                    <li class="dropdown">
+                        <p class="dropdown-btn" onclick="dropFunction1()"> Templates <i class="fa fa-angle-down"></i></p>
+                        <div class="dropdown-content" id="dropdown-content1">
+                            <a href="#">Template 1</a>
+                            <a href="#">Template 2</a>
+                            <a href="#">Template 3</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <p class="dropdown-btn" onclick="dropFunction2()"> Products <i class="fa fa-angle-down"></i></p>
+                        <div class="dropdown-content" id="dropdown-content2">
+                            <a href="#">Product 1</a>
+                            <a href="#">Product 2</a>
+                            <a href="#">Product 3</a>
+                        </div>
+                    </li>
+                    <li class="support"><a href="#">Support</a></li>
+                </ul>
+
+                <div class="authentication">
+                    <a href="./sign_up.html">Sign up</a>
+                    <a href="#">Log In</a>
+                </div>
+            </div>
+
+
+            
+        </nav>
+
+
+       <!-- Mobile Navigation --> 
+        <nav class="mobile-nav navbar" id="navbar">
+            <div class="logo-wrapper">
+                <a href="./index.html"><span>Webella</span></a>
+
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item dropdown">
+                    <!-- <a href="#" class="nav-link">Services</a> -->
+                    <p class="dropdown-btn" onclick="dropFunction1()"> Templates <i class="fa fa-angle-down"></i></p>
+                    <div class="dropdown-content" id="dropdown-content3">
+                        <a href="#" class="lnk">Template 1</a>
+                        <a href="#" class="lnk">Template 2</a>
+                        <a href="#" class="lnk">Template 3</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <!-- <a href="#" class="nav-link">Blog</a> -->
+                    <p class="dropdown-btn"onclick="dropFunction2()" > Products <i class="fa fa-angle-down" id="angle-down"></i></p>
+                    <div class="dropdown-content" id="dropdown-content4">
+                        <a href="#" class="lnk">Product 1</a>
+                        <a href="#" class="lnk">Product 2</a>
+                        <a href="#" class="lnk">Product 3</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <!-- <a href="#" class="nav-link">About</a> -->
+                    <li class="support lnk"><a href="#">Support</a></li>
+                </li>
+                <li class="nav-item">
+                    <!-- <a href="#" class="nav-link">Contact</a> -->
+                    <div class="authentication">
+                        <a href="./sign_up.html" class="lnk">Sign up</a>
+                        <a href="#" class="lnk">Log In</a>
+                    </div>
+                </li>
+            </ul>
+            
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav> 
+
+    </header>
+
+    <main>
+
+        <h1>Log In</h1>
+
+        <form action="">
+            <div>
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="name@example.com" required> 
+            </div>
+
+            <div class="password-container">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="password" required>
+                <i class="far fa-eye" id="togglePassword"></i> 
+            </div>
+
+            <div class="check">
+                <div>
+                    <input type="checkbox" name="remember-me" id=""> <span>Remeber me</span>
+                </div>
+                <span><a href="#" class="blue">Forgot Password?</a></span>
+            </div>
+
+            <input type="submit" value="Log In">
+        </form>
+
+        <p>Don't have an account?  <a href="./sign_up.html" class="blue">Sign Up</a></p>
+        <p>Logging into your account means you agree to our <a href="#" class="blue">Terms of Use</a> </p>
+
+    </main>
+
+
+
+    <script src="./js/navbar.js"></script>
+    <script src="./js/showpassword.js"></script>
+
+</body>
+</html
