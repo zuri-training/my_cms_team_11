@@ -1,6 +1,9 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, HttpResponseRedirect
 from django.contrib import messages, auth
 from django.contrib.auth import authenticate, login, logout
+
+from .models import User
+from webella.models import user_dashboard
 
 # Create your views here.
 from .forms import RegistrationUserForm, UserLoginForm
@@ -11,11 +14,15 @@ def register(request):
     if request.POST:
         registration_form = RegistrationUserForm(request.POST)
         if registration_form.is_valid():
+            user_email= registration_form.cleaned_data['email']
+            request.session['user_email'] = user_email
             registration_form.save()
-            # messages.success(request, 'Registration successful!')
+            messages.success(request, 'Registration successful!')
+            
+            return redirect('webella:on_boarding')
 
-            return redirect('accounts:login')
         context['registration_form'] = registration_form
+        
     else:
         registration_form = RegistrationUserForm()
         context['registration_form'] = registration_form
@@ -34,7 +41,15 @@ def login_page(request):
 
             if user is not None:
                 login(request, user)
-                return redirect('webella:dashboard')
+                user_dashboard_dets = user_dashboard.objects.get(user=user)
+                
+                if user_dashboard_dets.website_type == 'B':
+                    return redirect('webella:blog_dashboard')
+                
+                elif user_dashboard_dets.website_type == 'P':
+                    return redirect('webella:portfolio_dashboard')
+                
+            
         else:
             context['login_form'] = login_form
 
@@ -51,6 +66,6 @@ def logout_user(request):
 
 
 def forgot_password(request):
-    # form = UserCreationForm()
-    # context = {"form": form}
+    
+    
     return render(request, 'accounts/forgotpassword.html')
