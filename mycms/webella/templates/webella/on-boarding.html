@@ -7,15 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>LOGIN PAGE</h1>
-    <form method="post">
+    <h3>You're almost done...</h3>
+    <form method="post" >
         {% csrf_token %} 
-        {{login_form}}
-    
-        <button type="submit">Login</button>
+        
+        {{on_boarding_form.as_p}}
+        {{email}}
+        <button type="submit">Generate my website</button>
     </form>
-    <a href="{% url 'reset_password'  %}">Forgot Password?</a>
-    <a href="{% url 'accounts:register'  %}">Create an account</a>
+
 </body>
 </html>
-
