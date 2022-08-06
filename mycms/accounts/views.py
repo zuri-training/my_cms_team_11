@@ -18,7 +18,6 @@ def register(request):
             request.session['user_email'] = user_email
             registration_form.save()
             messages.success(request, 'Registration successful!')
-            
             return redirect('webella:on_boarding')
 
         context['registration_form'] = registration_form
@@ -47,7 +46,7 @@ def login_page(request):
                     return redirect('webella:blog_dashboard')
                 
                 elif user_dashboard_dets.website_type == 'P':
-                    return redirect('webella:portfolio_dashboard')
+                    return redirect()
                 
             
         else:
