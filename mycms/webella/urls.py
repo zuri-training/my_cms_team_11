@@ -1,4 +1,5 @@
 from django.urls import path
+<<<<<<< HEAD
 from . import views
 
 urlpatterns = [
@@ -7,3 +8,15 @@ urlpatterns = [
     path('templates/', views.templates, name = 'templates')
 ]
 
+=======
+
+from . import views
+
+app_name = 'webella'
+
+
+urlpatterns = [
+    path('', views.landing_page, name='landing_page'),
+    path('dashboard/', views.dashboard, name='dashboard'),
+]
+>>>>>>> main
