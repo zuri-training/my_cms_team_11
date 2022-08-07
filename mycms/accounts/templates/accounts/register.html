@@ -1,18 +1,159 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static './css/header_section.css' %}">
+    <link rel="stylesheet" href="{% static './css/authentication.css' %}">
+    <title>Webella || Register</title>
 </head>
 <body>
-    Registration PAGE
-    <form method="post">
-        {% csrf_token %}
-        {{registration_form}}
-        <input type="submit" name="Send email">
-    </form>
-    <a href="{% url 'accounts:login' %}">Already got an account?</a>
+    <header>
+        <!-- NAVIGATION -->
+        <!-- Desktop Navigation -->
+        <nav id="desktop-nav">
+            <div class="logo-wrapper">
+                <a href="./index.html"><span>Webella</span></a>
+
+            </div>
+            
+            <div class="main-links "  id="main-links">
+
+                <ul>
+
+                    <li class="dropdown">
+                        <p class="dropdown-btn" onclick="dropFunction1()"> Templates <i class="fa fa-angle-down"></i></p>
+                        <div class="dropdown-content" id="dropdown-content1">
+                            <a href="#">Template 1</a>
+                            <a href="#">Template 2</a>
+                            <a href="#">Template 3</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <p class="dropdown-btn" onclick="dropFunction2()"> Products <i class="fa fa-angle-down"></i></p>
+                        <div class="dropdown-content" id="dropdown-content2">
+                            <a href="#">Product 1</a>
+                            <a href="#">Product 2</a>
+                            <a href="#">Product 3</a>
+                        </div>
+                    </li>
+                    <li class="support"><a href="#">Support</a></li>
+                </ul>
+
+                <div class="authentication">
+                    <a href="{% url 'accounts:register' %}">Sign up</a>
+                    <a href="{% url 'accounts:login' %}">Log In</a>
+                </div>
+            </div>
+
+
+            
+        </nav>
+
+
+       <!-- Mobile Navigation --> 
+        <nav class="mobile-nav navbar" id="navbar">
+            <div class="logo-wrapper">
+                <a href="./index.html"><span>Webella</span></a>
+
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item dropdown">
+                    <!-- <a href="#" class="nav-link">Services</a> -->
+                    <p class="dropdown-btn" onclick="dropFunction1()"> Templates <i class="fa fa-angle-down"></i></p>
+                    <div class="dropdown-content" id="dropdown-content3">
+                        <a href="#" class="lnk">Template 1</a>
+                        <a href="#" class="lnk">Template 2</a>
+                        <a href="#" class="lnk">Template 3</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <!-- <a href="#" class="nav-link">Blog</a> -->
+                    <p class="dropdown-btn"onclick="dropFunction2()" > Products <i class="fa fa-angle-down" id="angle-down"></i></p>
+                    <div class="dropdown-content" id="dropdown-content4">
+                        <a href="#" class="lnk">Product 1</a>
+                        <a href="#" class="lnk">Product 2</a>
+                        <a href="#" class="lnk">Product 3</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <!-- <a href="#" class="nav-link">About</a> -->
+                    <li class="support lnk"><a href="#">Support</a></li>
+                </li>
+                <li class="nav-item">
+                    <!-- <a href="#" class="nav-link">Contact</a> -->
+                    <div class="authentication">
+                        <a href="{% url 'accounts:register' %}">Sign up</a>
+                        <a href="{% url 'accounts:login' %}">Log In</a>
+                    </div>
+                </li>
+            </ul>
+            
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav> 
+
+    </header>
+
+    <main class="signup-main">
+
+        <h1>Sign Up</h1>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <div>
+                <label for="firstName">First Name</label>
+                <input type="text" name="firstName" id="firstName" placeholder="Enter your first name" required> 
+            </div>
+
+            <div>
+                <label for="firstName">Last Name</label>
+                <input type="text" name="lastName" id="lastName" placeholder="Enter your last name" required> 
+            </div>
+
+            <div>
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="name@example.com" required> 
+            </div>
+
+            <!-- <div>
+                <label for="phone">Phone Number</label>
+                <input type="tel" name="email" id="email" placeholder="Your phone number" required> 
+            </div> -->
+
+            <div class="password-container">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="password" required>
+                <i class="far fa-eye toggle" id="togglePassword"></i> 
+            </div>
+
+            <div class="password-container">
+                <label for="confirmPassword">Confrim Password</label>
+                <input type="password" name="confirmpassword" id="confirmPassword" placeholder="Confrim Password" required>
+                <i class="far fa-eye toggle" id="toggleConfirmPassword"></i> 
+            </div>
+
+
+            <input type="submit" name="Send email" value="Sign Up">
+        </form>
+
+        <p>Already have an account?  <a href="{% url 'accounts:login' %}" class="blue">Log In</a></p>
+        <p>Logging into your account means you agree to our <a href="#" class="blue">Terms of Use</a> </p>
+
+    </main>
+
+
+
+    <script src="{% static './js/navbar.js' %}"></script>
+    <script src="{% static './js/showpassword.js' %}"></script>
+
 </body>
 </html>
