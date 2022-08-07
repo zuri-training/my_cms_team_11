@@ -1,0 +1,270 @@
+/* start of header styling */
+header {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.nav-ul {
+  min-height: 100vh;
+  flex-direction: column;
+  align-self: center;
+  position: fixed;
+  left: -100%;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.nav-ul.active {
+  left: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url(../images/first-one.png);
+}
+
+.nav-li {
+  padding: 20px;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+  float: right;
+  margin: 5px 10px;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  transition: all 0.5s ease;
+  background-color: var(--secondary);
+}
+/* end of header styling */
+
+/* start of main styling */
+.main-div {
+  min-height: 90vh;
+  flex-direction: column;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url(../images/first-one.png);
+}
+
+#couple-name {
+  text-transform: capitalize;
+  margin-bottom: 40px;
+  font-size: 70px;
+}
+/* end of main styling */
+
+/* start of testament styling */
+.testament {
+  min-height: 80vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url(../images/fourth.png);
+}
+
+.testament-div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.testament-div img {
+  width: 12rem;
+}
+
+.testament-div .groom {
+  margin-top: -80px;
+}
+
+.testament-div h1 {
+  font-size: 70px;
+  padding: 30px 0;
+}
+
+.testament-div p {
+  padding: 20px 0;
+  margin: 0 auto;
+  width: 90%;
+}
+/* end of testament styling */
+
+/* start of schedule styling */
+.schedule {
+  min-height: 80vh;
+  margin: 0 auto;
+  width: 70%;
+  padding: 30px 0;
+}
+
+.schedule h1 {
+  font-size: 35px;
+  text-align: center;
+}
+
+#keep-up {
+  padding: 30px 0;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+.schedule-div {
+  display: grid;
+  text-align: center;
+  gap: 40px;
+}
+
+.span {
+  font-size: 12px;
+}
+
+.schedule-link {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.schedule-link a {
+  text-decoration: none;
+}
+/* end of schedule styling */
+
+/* start of footer styling */
+footer {
+  text-align: center;
+  background-color: var(--secondary);
+  padding: 30px 0;
+}
+
+.footer-ul {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-li {
+  padding: 0 15px;
+  list-style-type: none;
+}
+
+.footer-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-icons {
+  padding: 30px 0;
+}
+
+.footer-icons img {
+  padding: 0 15px;
+}
+/* end of footer styling */
+
+/* Start Of Blog Page Styling */
+.main-blog {
+  min-height: 200vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url(../images/first-one.png);
+  padding-top: 70px;
+}
+
+.image-div {
+  display: block;
+  margin: 0 auto;
+}
+
+.image-div img {
+  height: 20em;
+}
+
+.entries-div {
+  text-align: center;
+}
+
+.entries-div h2 {
+  padding: 20px 0;
+}
+
+.entries-div p {
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.blog-flex div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.blog-flex p {
+  width: 80%;
+}
+
+.blog-flex span {
+  color: #e2e1ff;
+}
+
+.btn {
+  width: 25%;
+  cursor: pointer;
+  background: none;
+  text-align: start;
+  border: none;
+}
+/* End Of Blog Page Styling */
+
+/* Start Of Gallery Styling */
+.main-gallery {
+  min-height: 10vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/first-one.png);
+}
+
+.gallery {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.gallery-text h1 {
+  font-size: 50px;
+}
+
+.gallery-text p {
+  padding: 30px 0;
+}
+
+.gallery-images {
+  display: grid;
+  gap: 30px;
+}
+
+.gallery-images img {
+  width: 100%;
+}
+/* End Of Gallery Styling */
