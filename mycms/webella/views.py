@@ -8,10 +8,10 @@ from accounts.models import User
 # Create your views here.
 
 
-def landing_page(request):
+def index(request):
     
     
-    return render(request, 'webella/landing.html')
+    return render(request, 'webella/index.html')
 
 
 def on_boarding(request):
