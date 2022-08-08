@@ -1,0 +1,17 @@
+/* start of testament styling */
+.testament-div p {
+  width: 70%;
+}
+/* end of testament styling */
+
+/* start of schedule styling */
+.schedule-div-img {
+  width: 80%;
+}
+/* end of schedule styling */
+
+/* Start Of Gallery Styling */
+.gallery-images {
+  grid-template-columns: repeat(2, 1fr);
+}
+/* End Of Gallery Styling */
