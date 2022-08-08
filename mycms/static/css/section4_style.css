@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#section-3 {
+    background-color: #e5e5e5;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 70%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.img-slide {
+    width: 1215px;
+    height: 765px;
+    margin-top: 100px;
+}
+
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: -33px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #ABA9AD;
+}
+
+.sec3-para {
+  font-size: 20px;
+  font-weight: 500;
+  color: #121212;
+  text-align: center;
+  padding: 30px 200px 20px 200px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.button-btnn {
+  text-align: center;
+}
+
+.sec3-btnn {
+    margin: 0 10px 20px;
+    padding: 16px 30px;
+    border-radius: 8px;
+    border: 2.5px solid #003865;
+}
+
+.btnn-text {
+    text-decoration: none;
+    color: #003865;
+    font-weight: 600;
+    font-family: 'Lexend', sans-serif;
+}
+
+i {
+  width: 25px;
+  height: 18px;
+  color: #003865;
+  --fa-rotate-angle: 45deg;
+}
+
+/* The dots/bullets/indicators */
+.indicators {
+  text-align:center;
+  padding-bottom: 50px;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #ABA9AD;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #003865;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@media (max-width: 760px) {
+    .slideshow-container {
+      width: 85%;
+      position: static;
+      margin: 0 50px;
+    }
+    
+    .img-slide {
+      width: 100%;
+      height: 350px;
+    }
+
+    .prev, .next {
+      top: 35%;
+    }
+
+    .next {
+      right: 44px;
+    }
+
+    .sec3-para {
+      padding: 30px 50px 20px;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 1070px) {
+  .slideshow-container {
+    width: 90%;
+    position: static;
+    padding: 0 50px;
+  }
+
+  .img-slide {
+    width: 100%;
+    height: 500px;
+  }
+}
+
+@media (min-width:1070px) and (max-width:1400px) {
+  .slideshow-container {
+    width: 90%;
+    position: static;
+  }
+
+  .img-slide {
+    height: 650px;
+  }
+
+  .next {
+    right: 22px;
+  }
+}

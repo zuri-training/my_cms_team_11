@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap');
+
+
+/* Default */
+.blue{
+    color: #003865;
+    transition: all 0.3s ease-in-out;
+}
+
+.blue:hover{
+    font-weight: 600;
+}
+
+
+/* Main */
+main{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    /* padding-top: 30px; */
+}
+
+.signup-main{
+    height: 100%;
+    padding-bottom: 50px;
+}
+
+main h1{
+    margin-top: 40px;
+    color: #393939;
+    font-family: 'Lexend', sans-serif;
+}
+
+form{
+    /* width: 40%; */
+    margin: auto;
+    padding: 30px;
+}
+
+label,
+input:not(input[type= "checkbox"], input[type= "submit"]),
+.check{
+    width: 80%;
+    margin: auto;
+}
+
+label{
+    display: block;
+    text-align: left;
+}
+
+input:not(input[type= "checkbox"], input[type= "submit"]){
+    display: block;
+    height: 40px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    outline: none;
+    border: 1px solid #ADADAD;
+    background-color: #EFEFEF;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+.password-container{
+    position: relative;
+}
+
+#togglePassword,
+#toggleConfirmPassword{
+    cursor: pointer;
+    position: absolute;
+    /* margin-top: -34px;
+    margin-left: 150px; */
+    color: #ADADAD;
+}
+
+.check{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    /* margin-bottom: 40px; */
+}
+
+.check div{
+    display: flex;
+}
+
+.check div span{
+    margin-left: 2px;
+}
+
+input[type= "submit"] {
+    outline: none;
+    border: none;
+    height: 40px;
+    background-color: #003865;
+    color: #ffffff;
+    width: 25%;
+    margin: auto;
+    border-radius: 7px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+input[type= "submit"]:hover{
+    border: 1px solid #003865;
+    background-color: #ffffff;
+    color: #003865;
+    font-weight: 800;
+}
+
+
+main p{
+    font-size: 13px;
+    color: #595959;
+    margin-top: 10px;
+}
+
+
+
+
+/* MEDIA QUERIES */
+
+/* Mobile  */
+@media only screen and (min-width: 320px){
+    form{
+        width: 100%;
+    }
+
+    label,
+    input:not(input[type= "checkbox"], input[type= "submit"]),
+    .check{
+        width: 90%;
+    }
+
+    #togglePassword,
+    #toggleConfirmPassword{
+        margin-top: -34px;
+        margin-left: 100px;
+    }
+
+    input[type= "submit"] {
+        width: 35%;
+    }
+}
+
+
+
+/* Tablets */
+@media only screen and (min-width:481px){
+
+    form{
+        width: 80%;
+    }
+
+    #togglePassword,
+    #toggleConfirmPassword {
+        margin-top: -36px;
+        margin-left: 200px;
+    }
+
+    input[type= "submit"] {
+        width: 27%;
+    }
+}
+
+
+/* Small screens laptops */
+@media only screen and (min-width:769px){
+
+    form{
+        width: 60%;
+    }
+
+    #togglePassword,
+    #toggleConfirmPassword {
+        margin-top: -36px;
+        margin-left: 160px;
+    }
+
+    input[type= "submit"] {
+        width: 30%;
+    }
+}
+
+/* large screens, desktop */
+@media only screen and (min-width:1205px){
+
+    form{
+        width: 40%;
+    }
+
+    #togglePassword,
+    #toggleConfirmPassword {
+        margin-top: -34px;
+        margin-left: 170px;
+    }
+
+    input[type= "submit"] {
+        width: 25%;
+    }
+}
