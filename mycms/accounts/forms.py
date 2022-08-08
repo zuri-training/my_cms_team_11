@@ -6,33 +6,30 @@ from .models import User
 
 
 class RegistrationUserForm(UserCreationForm):
-    password1 = forms.CharField(label='password', widget=forms.PasswordInput(attrs={'placeholder':'Password','name':'Name','id':'common_id_for_imputfields','class':'input-class_name'}))
-    password2 = forms.CharField(label='password', widget=forms.PasswordInput(attrs={'placeholder':'Verify Password','name':'Name','id':'common_id_for_imputfields','class':'input-class_name'}))
+    password1 = forms.CharField(label='password', widget=forms.PasswordInput(attrs={'placeholder':'Password','name':'password','id':'password','class':'input-class_name'}))
+    password2 = forms.CharField(label='Confirm password', widget=forms.PasswordInput(attrs={'placeholder':'Confirm Password','name':'confirmpassword','id':'confirmpassword','class':'input-class_name'}))
 
     class Meta:
         model = User
         fields = ('email', 'first_name', 'last_name', 'password1', 'password2')
-        widgets={
-                   "name":forms.TextInput(attrs={'placeholder':'Name','name':'Name','id':'common_id_for_imputfields','class':'input-class_name'}),
-                   "description":forms.TextInput(attrs={'placeholder':'description','name':'description','id':'common_id_for_imputfields','class':'input-class_name'}),
-                }  
+        
         widgets = {
-            'first_name': forms.TextInput(attrs={'placeholder':'First Name','name':'Name','id':'common_id_for_imputfields','class':'input-class_name'}),
-            'last_name': forms.TextInput(attrs={'placeholder':'Last Name','name':'Name','id':'common_id_for_imputfields','class':'input-class_name'}),
-            'email': forms.EmailInput(attrs={'placeholder':'Email','name':'Name','id':'common_id_for_imputfields','class':'input-class_name'}),
+            'first_name': forms.TextInput(attrs={'placeholder':'First Name','name':'firstName','id':'firstName','class':'input-class_name'}),
+            'last_name': forms.TextInput(attrs={'placeholder':'Last Name','name':'lastName','id':'lastName','class':'input-class_name'}),
+            'email': forms.EmailInput(attrs={'placeholder':'name@example.com','name':'email','id':'email','class':'input-class_name'}),
             'password1': password1,
             'password2': password2,
         }
 
 
 class UserLoginForm(ModelForm):
-    password = forms.CharField(label='password', widget=forms.PasswordInput())
+    password = forms.CharField(label='password', widget=forms.PasswordInput(attrs={'placeholder':'password','name':'password','id':'password','class':'input-class_name'}))
 
     class Meta:
         model = User
         fields = ('email', 'password')
         widgets = {
-            'email': forms.EmailInput(attrs={'placeholder':'Email','name':'Name','id':'common_id_for_imputfields','class':'input-class_name'}),
+            'email': forms.EmailInput(attrs={'placeholder':'Email','name':'email','id':'email','class':'input-class_name'}),
             'password': password,
         }
 
