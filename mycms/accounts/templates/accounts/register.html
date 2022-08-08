@@ -109,7 +109,7 @@
         <form method="post">
             {% csrf_token %}
 
-            <div>
+<!--             <div>
                 <label for="firstName">First Name</label>
                 <input type="text" name="firstName" id="firstName" placeholder="Enter your first name" required> 
             </div>
@@ -139,7 +139,8 @@
                 <label for="confirmPassword">Confrim Password</label>
                 <input type="password" name="confirmpassword" id="confirmPassword" placeholder="Confrim Password" required>
                 <i class="far fa-eye toggle" id="toggleConfirmPassword"></i> 
-            </div>
+            </div> -->
+            {{registration_form}}
 
 
             <input type="submit" name="Send email" value="Sign Up">
