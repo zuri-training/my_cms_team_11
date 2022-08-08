@@ -139,7 +139,7 @@ nav{
     border-radius: 5px;
     color: #003865;
     font-size: 14px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
 }
 
 .authentication a:hover{
@@ -158,31 +158,40 @@ nav{
 
 /* Hero section : left part styles */
 .hero-section{
-    height: 80vh;
+    height: 90vh;
     background-color: #f9f9f9;
-    clip-path: ellipse(84% 100% at 50% 0%);
-    display: flex;
+    clip-path: ellipse(94% 100% at 50% 0%);
     padding: 20px;
 }
 
+.hero-section-container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+
 .hero-section-left{
-    flex: 60%;
-    padding: 40px;
+    flex: 50%;
+    padding: 10px;
 }
 
 .hero-section-left h1{
-    font-size: 40px;
+    font-size: 50px;
+    font-weight: 900;
     margin-bottom: 20px;
+    color: #141313;
+    line-height: 1.2;
 }
 
-.hero-section-left h1 span{
+/* .hero-section-left h1 span{
     color: #6DD5FA;
-}
+} */
 
 .hero-section-left p{
     font-size: 14px;
-    margin-bottom: 20px;
-    color: #141313;
+    margin-bottom: 30px;
+    width: 80%;
+    /* color: #141313; */
 }
 
 .hero-section-left a{
@@ -192,7 +201,7 @@ nav{
     color: #003865;
     font-size: 17px;
     border-radius: 3px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 10px;
     transition: 0.3s ease-in-out;
 }
@@ -202,23 +211,24 @@ nav{
     color: #ffffff;
 }
 
-.try{
+.tryy{
     margin-top: 40px;
     color: #003865;
 }
 
 /* Hero Section : Right part styles */
 .hero-section-right{
-    flex: 40%;
-    display: flex;
+    flex: 50%;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 50px;
+    align-items: center;  */
+    padding: 30px 0;
 }
 
 .hero-section-right-image-container{
-    height: 270px;
-    width: 330px;
+    height: 310px;
+    width: 410px;
+    margin-left: 30px;
 }
 
 .hero-section-right-image-container img{
@@ -227,8 +237,8 @@ nav{
 }
 
 .bottom-line{
-    height: 11px;
-    width: 370px;
+    height: 12px;
+    width: 470px;
     background-image: linear-gradient(to right, #0D1012, #CAD4DB ,#242729);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -241,14 +251,17 @@ nav{
 .below-hero-section{
     height: 80vh;
     width: 100%;
+    margin-top: 30px;
     padding: 20px;
 }
 
 .below-hero-section h2{
-    font-size: 28px;
-    width: 40%;
+    font-size: 32px;
+    width: 50%;
     margin: auto;
     text-align: center;
+    font-weight: 700;
+    color: #00182C;
 }
 
 .main-box{
@@ -256,12 +269,12 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 10px;
+    font-size: 11px;
 }
 
 .box1{
-    width: 180px;
-    height: 160px;
+    width: 130px;
+    height: 110px;
     background-color: #FAF8F8;
     border: 1px solid #6C6C6C;
     border-radius: 5px;
@@ -276,7 +289,7 @@ nav{
     border-bottom: 1px solid #6C6C6C;
 }
 
-.dot{
+.dots{
     height: 5px;
     width: 5px;
     border-radius: 50%;
@@ -287,8 +300,8 @@ nav{
 }
 
 .box1 p{
-    width: 50%;
-    height: 50%;
+    width: 60%;
+    height: 60%;
     margin: auto;
     text-align: center;
     color: #181818;
@@ -303,17 +316,19 @@ nav{
 .box2 .top-box{
     width: 400px;
     height: 250px;
-    border: 1px solid #003865;
+    /* border: 1px solid #003865; */
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    background-image: url(../images/Content_Editor_2.png);
+    background-size: cover;
 }
 
 .box2 .bottom-box{
-    height: 13px;
+    height: 14px;
     width: 450px;
     border: 1px solid #003865;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
    
@@ -394,15 +409,20 @@ nav{
 
     /* Left Part */
     .hero-section{
-        height: 90vh;
+        height: 100vh;
         padding: 10px;
         padding-top: 30px;
-        flex-direction: column;
         clip-path: ellipse(129% 100% at 50% 0%);
+    }
+
+    .hero-section-container{
+        flex-direction: column;
     }
     
     .hero-section-left{
-        flex: 50%;
+        display: block;
+        width: 90%;
+        margin: auto;
         padding: 10px;
         text-align: center;
     }
@@ -413,6 +433,7 @@ nav{
     }
     
     .hero-section-left p{
+        width: 100%;
         font-size: 14px;
     }
     
@@ -427,13 +448,16 @@ nav{
     
     /* Right part  */
     .hero-section-right{
-        flex: 50%;
-        padding-top: 30px;
+       display: block;
+        /* width: 50%; */
+        margin: auto;
+        /* padding-top: 20px; */
     }
 
     .hero-section-right-image-container{
         height: 150px;
         width: 200px;
+        margin-left: 20px;
     }
 
     .bottom-line{
@@ -451,7 +475,7 @@ nav{
 
     .below-hero-section h2{
         font-size: 24px;
-        width: 100%;
+        width: 80%;
         text-align: center;
     }
 
@@ -462,14 +486,14 @@ nav{
     }
 
     .box1{
-        width: 90px;
-        height: 80px;
+        width: 110px;
+        height: 85px;
     }
 
     .box1 p{
         width: 100%;
         height: 100%;
-        padding: 5px;
+        padding: 1px;
         text-align: center;
     }
 
@@ -480,12 +504,36 @@ nav{
         align-items: center;
     }
     .box2 .top-box{
-        width: 120px;
-        height: 100px;
+        width: 180px;
+        height: 130px;
     }
 
     .box2 .bottom-box{
         height: 10px;
-        width: 150px;
+        width: 220px;
     }
 }
+
+
+
+/* Larger screens */
+
+ @media only screen and (min-width: 1441px){
+    .hero-section{
+        height: 40vh;
+        padding: 10px;
+        padding-top: 30px;
+    }
+
+    .hero-section-container{
+        width: 80%;
+    }
+
+    .below-hero-section{
+        height: 40vh;
+        width: 80%;
+        margin: auto;
+        margin-top: 30px;
+        padding: 20px;
+    }
+} 
