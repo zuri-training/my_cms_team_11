@@ -40,13 +40,10 @@ def login_page(request):
 
             if user is not None:
                 login(request, user)
-                user_dashboard_dets = user_dashboard.objects.get(user=user)
+                # user_dashboard_dets = user_dashboard.objects.get(user=user)
+                return redirect('webella:dashboard')
                 
-                if user_dashboard_dets.website_type == 'B':
-                    return redirect('webella:blog_dashboard')
-                
-                elif user_dashboard_dets.website_type == 'P':
-                    return redirect('webella:portfolio_dashboard')
+               
                 
             
         else:
