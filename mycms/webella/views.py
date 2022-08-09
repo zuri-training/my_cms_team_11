@@ -30,7 +30,7 @@ def on_boarding(request):
                 
                 del request.session['user_email']
                 
-                return redirect('webella:portfolio_dashboard')  
+                return redirect('webella:dashboard')  
             else:
                 messages.error(request, 'Error saving form')
             
