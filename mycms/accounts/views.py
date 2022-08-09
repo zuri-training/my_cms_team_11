@@ -46,7 +46,7 @@ def login_page(request):
                     return redirect('webella:blog_dashboard')
                 
                 elif user_dashboard_dets.website_type == 'P':
-                    return redirect()
+                    return redirect('webella:portfolio_dashboard')
                 
             
         else:
