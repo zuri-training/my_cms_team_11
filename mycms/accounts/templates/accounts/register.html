@@ -108,40 +108,7 @@
 
         <form method="post">
             {% csrf_token %}
-
-            <div>
-                <label for="firstName">First Name</label>
-                <input type="text" name="firstName" id="firstName" placeholder="Enter your first name" required> 
-            </div>
-
-            <div>
-                <label for="firstName">Last Name</label>
-                <input type="text" name="lastName" id="lastName" placeholder="Enter your last name" required> 
-            </div>
-
-            <div>
-                <label for="email">Email Address</label>
-                <input type="email" name="email" id="email" placeholder="name@example.com" required> 
-            </div>
-
-            <!-- <div>
-                <label for="phone">Phone Number</label>
-                <input type="tel" name="email" id="email" placeholder="Your phone number" required> 
-            </div> -->
-
-            <div class="password-container">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="password" required>
-                <i class="far fa-eye toggle" id="togglePassword"></i> 
-            </div>
-
-            <div class="password-container">
-                <label for="confirmPassword">Confrim Password</label>
-                <input type="password" name="confirmpassword" id="confirmPassword" placeholder="Confrim Password" required>
-                <i class="far fa-eye toggle" id="toggleConfirmPassword"></i> 
-            </div>
-
-
+            {{registration_form}}
             <input type="submit" name="Send email" value="Sign Up">
         </form>
 
