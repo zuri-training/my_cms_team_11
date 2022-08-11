@@ -40,10 +40,13 @@ def on_boarding(request):
 
 def dashboard(request):
     context = {}
+    print(request.user)
+    user_details = User.object.get(email=request.user)
     
+    context['user_details'] = user_details
        
     
     
-    return render(request, 'webella/dashboard.html')
+    return render(request, 'webella/dashboard.html', context)
 
 
