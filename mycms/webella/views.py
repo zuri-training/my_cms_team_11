@@ -38,19 +38,12 @@ def on_boarding(request):
 
     return render(request, 'webella/on-boarding.html', context)
 
-def blog_dashboard(request):
+def dashboard(request):
     context = {}
     
        
     
     
-    return render(request, 'webella/blog-dashboard.html')
+    return render(request, 'webella/dashboard.html')
 
 
-def portfolio_dashboard(request):
-    context = {}
-    
-       
-    
-    
-    return render(request, 'webella/portfolio-dashboard.html')
