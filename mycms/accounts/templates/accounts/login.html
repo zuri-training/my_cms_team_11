@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
-    <link rel="stylesheet" href="./css/header_section.css">
-    <link rel="stylesheet" href="./css/authentication.css">
-    <title>Webella || Homepage</title>
+    <link rel="stylesheet" href="{% static './css/header_section.css' %}">
+    <link rel="stylesheet" href="{% static './css/authentication.css' %}">
+    <title>Webella || Login</title>
 </head>
 <body>
     <header>
@@ -15,7 +16,7 @@
         <!-- Desktop Navigation -->
         <nav id="desktop-nav">
             <div class="logo-wrapper">
-                <a href="./index.html"><span>Webella</span></a>
+                <a href="{% url 'webella:index' %}"><span>Webella</span></a>
 
             </div>
             
@@ -43,8 +44,8 @@
                 </ul>
 
                 <div class="authentication">
-                    <a href="./sign_up.html">Sign up</a>
-                    <a href="#">Log In</a>
+                    <a href="{% url 'accounts:register' %}">Sign up</a>
+                    <a href="{% url 'accounts:login' %}">Log In</a>
                 </div>
             </div>
 
@@ -56,7 +57,7 @@
        <!-- Mobile Navigation --> 
         <nav class="mobile-nav navbar" id="navbar">
             <div class="logo-wrapper">
-                <a href="./index.html"><span>Webella</span></a>
+                <a href="#"><span>Webella</span></a>
 
             </div>
 
@@ -86,8 +87,8 @@
                 <li class="nav-item">
                     <!-- <a href="#" class="nav-link">Contact</a> -->
                     <div class="authentication">
-                        <a href="./sign_up.html" class="lnk">Sign up</a>
-                        <a href="#" class="lnk">Log In</a>
+                        <a href="{% url 'accounts:register' %}">Sign up</a>
+                        <a href="{% url 'accounts:login' %}">Log In</a>
                     </div>
                 </li>
             </ul>
@@ -105,8 +106,9 @@
 
         <h1>Log In</h1>
 
-        <form action="">
-            <div>
+        <form method="post">
+            {% csrf_token %}
+<!--             <div>
                 <label for="email">Email Address</label>
                 <input type="email" name="email" id="email" placeholder="name@example.com" required> 
             </div>
@@ -115,27 +117,27 @@
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password" placeholder="password" required>
                 <i class="far fa-eye" id="togglePassword"></i> 
-            </div>
-
+            </div> -->
+            {{login_form}}
             <div class="check">
                 <div>
                     <input type="checkbox" name="remember-me" id=""> <span>Remeber me</span>
                 </div>
-                <span><a href="#" class="blue">Forgot Password?</a></span>
+                <span><a href="{% url 'reset_password'  %}" class="blue">Forgot Password?</a></span>
             </div>
 
             <input type="submit" value="Log In">
         </form>
 
-        <p>Don't have an account?  <a href="./sign_up.html" class="blue">Sign Up</a></p>
+        <p>Don't have an account?  <a href="{% url 'accounts:register'  %}" class="blue">Sign Up</a></p>
         <p>Logging into your account means you agree to our <a href="#" class="blue">Terms of Use</a> </p>
 
     </main>
 
 
 
-    <script src="./js/navbar.js"></script>
-    <script src="./js/showpassword.js"></script>
+    <script src="{% static './js/navbar.js' %}"></script>
+    <script src="{% static './js/showpassword.js' %}"></script>
 
 </body>
-</html
+</html>

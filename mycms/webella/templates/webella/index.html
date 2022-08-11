@@ -1,38 +1,38 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/fontawesome.min.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
-    <link rel="stylesheet" href="./css/header_section.css" title="compact">
-    <script src="https://use.fontawesome.com/540a4b782f.js"></script>
-    <script src="https://kit.fontawesome.com/4aa42703f0.js" crossorigin="anonymous"></script>
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/ba9e0d7117.js" crossorigin="anonymous"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/fontawesome.min.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+        <link rel="stylesheet" href="{% static './css/header_section.css' %}" title="compact">
+        <script src="https://use.fontawesome.com/540a4b782f.js"></script>
+        <script src="https://kit.fontawesome.com/4aa42703f0.js" crossorigin="anonymous"></script>
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/ba9e0d7117.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{% static './css/i_style.css' %}">
+        <link rel="stylesheet" href="{% static './css/section3_style.css' %}">
+        <link rel="stylesheet" href="{% static './css/section4_style.css' %}">
     
-       <link rel="stylesheet" href="./css/i_style.css">
-    <link rel="stylesheet" href="./css/section3_style.css">
-    <link rel="stylesheet" href="./css/section4_style.css">
-
-     <!-- Footer Styles -->
-     <link rel="stylesheet" href="./css/footer-styles.css" type="text/css">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link
-         href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500&family=Assistant:wght@200;300&family=Big+Shoulders+Display:wght@700&family=Chivo&family=Inter&family=Lato:wght@400;700&family=Lexend+Deca&family=Lexend:wght@400;500;600;700&family=Lobster&family=Martel+Sans&family=Merriweather+Sans:ital,wght@1,300&family=Open+Sans:wght@300;500;600;700&family=Outfit:wght@100;200;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@200;400&family=Poppins:wght@400;500;600;700&family=Quicksand:wght@300;500&family=Roboto+Flex:opsz,wght@8..144,200&family=Roboto:ital,wght@0,400;1,300&family=Rubik:ital,wght@1,300&display=swap"
-         rel="stylesheet">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link
-         href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500&family=Assistant:wght@200;300&family=Big+Shoulders+Display:wght@700&family=Chivo&family=Inter&family=Lato:wght@400;700&family=Lexend+Deca&family=Lexend:wght@400;500;600;700&family=Lobster&family=Martel+Sans&family=Merriweather+Sans:ital,wght@1,300&family=Open+Sans:wght@300;500;600;700&family=Outfit:wght@100;200;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@200;400&family=Poppins:wght@400;500;600;700&family=Quicksand:wght@300;500&family=Roboto+Flex:opsz,wght@8..144,200&family=Roboto:ital,wght@0,400;1,300&family=Rubik:ital,wght@1,300&family=Space+Grotesk:wght@400;500;600&display=swap"
-         rel="stylesheet">
-     <!-- Footer Styles -->
-
-    <title>Webella || Homepage</title>
-</head>
+         <!-- Footer Styles -->
+         <link rel="stylesheet" href="{% static './css/footer-styles.css' %}" type="text/css">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link
+             href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500&family=Assistant:wght@200;300&family=Big+Shoulders+Display:wght@700&family=Chivo&family=Inter&family=Lato:wght@400;700&family=Lexend+Deca&family=Lexend:wght@400;500;600;700&family=Lobster&family=Martel+Sans&family=Merriweather+Sans:ital,wght@1,300&family=Open+Sans:wght@300;500;600;700&family=Outfit:wght@100;200;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@200;400&family=Poppins:wght@400;500;600;700&family=Quicksand:wght@300;500&family=Roboto+Flex:opsz,wght@8..144,200&family=Roboto:ital,wght@0,400;1,300&family=Rubik:ital,wght@1,300&display=swap"
+             rel="stylesheet">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link
+             href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500&family=Assistant:wght@200;300&family=Big+Shoulders+Display:wght@700&family=Chivo&family=Inter&family=Lato:wght@400;700&family=Lexend+Deca&family=Lexend:wght@400;500;600;700&family=Lobster&family=Martel+Sans&family=Merriweather+Sans:ital,wght@1,300&family=Open+Sans:wght@300;500;600;700&family=Outfit:wght@100;200;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@200;400&family=Poppins:wght@400;500;600;700&family=Quicksand:wght@300;500&family=Roboto+Flex:opsz,wght@8..144,200&family=Roboto:ital,wght@0,400;1,300&family=Rubik:ital,wght@1,300&family=Space+Grotesk:wght@400;500;600&display=swap"
+             rel="stylesheet">
+         <!-- Footer Styles -->
+    
+        <title>Webella || Homepage</title>
+    </head>
 
 <body>
     <header>
@@ -40,7 +40,7 @@
         <!-- Desktop Navigation -->
         <nav id="desktop-nav">
             <div class="logo-wrapper">
-                <a href="#"><span>Webella</span></a>
+                <a href="{% url 'webella:index' %}"><span>Webella</span></a>
 
             </div>
 
@@ -69,8 +69,8 @@
                 </ul>
 
                 <div class="authentication">
-                    <a href="./sign_up.html">Sign up</a>
-                    <a href="./log_in.html">Log In</a>
+                    <a href="{% url 'accounts:register' %}">Sign up</a>
+                    <a href="{% url 'accounts:login' %}">Log In</a>
                 </div>
             </div>
 
@@ -113,8 +113,8 @@
                 <li class="nav-item">
                     <!-- <a href="#" class="nav-link">Contact</a> -->
                     <div class="authentication">
-                        <a href="./sign_up.html" class="lnk">Sign up</a>
-                        <a href="./log_in.html">Log In</a>
+                        <a href="{% url 'accounts:register' %}" class="lnk">Sign up</a>
+                        <a href="{% url 'accounts:login' %}">Log In</a>
                     </div>
                 </li>
             </ul>
@@ -147,7 +147,7 @@
 
                 <div class="hero-section-right">
                     <div class="hero-section-right-image-container">
-                        <img src="./images/hero-right-image.jpg" alt="">
+                        <img src="{% static './images/hero-right-image.jpg' %}"alt="">
                     </div>
                     <div class="bottom-line"></div>
 
@@ -204,7 +204,7 @@
                     </button>
                 </div>
                 <div class="illustration">
-                    <img src="./images/i_webella_devices.png" alt="">
+                    <img src="{% static './images/i_webella_devices.png' %}"alt="">
                 </div>
             </section>
         </div>
@@ -223,13 +223,16 @@
 
             <div class="template_wrapper">
                 <div class="template_cards">
-                    <img src="./images/i_template_1.png" alt="">
+                    <img src="{% static './images/i_template_1.png' %}"alt="">
+                    
                 </div>
                 <div class="template_cards">
-                    <img src="./images/i_template_2.png" alt="">
+                    <img src="{% static './images/i_template_2.png' %}"alt="">
+                    
                 </div>
                 <div class="template_cards">
-                    <img src="./images/i_template_3.png" alt="">
+                    <img src="{% static './images/i_template_3.png' %}"alt="">
+                    
                 </div>
             </div>
         </section>
@@ -238,7 +241,7 @@
             <div class="section3-wrapper">
                 <div class="section3-left-side">
                     <div class="section3-image-wrapper">
-                        <img src="./images/coffee-laptop.png" alt="an_early_start">
+                        <img src="{% static './images/coffee-laptop.png' %}" alt="an_early_start">
                     </div>
                 </div>
     
@@ -304,19 +307,19 @@
     
                 <!-- Full-width images with number and caption text -->
                 <div class="mySlides fade">
-                  <img src="/images/img1.png" class="img-slide">
-                  <p class="sec3-para">Join our virtual community event to share, learn and connect with like minded entrepreneurs and professionals.</p>
-                </div>
-              
-                <div class="mySlides fade">
-                  <img src="/images/img_2.png" class="img-slide">
-                  <p class="sec3-para">Visit our resources and inspiration center to get expert tips and advice.</p>
-                </div>
-              
-                <div class="mySlides fade">
-                  <img src="./images/img_3.png" class="img-slide">
-                  <p class="sec3-para">Check out our help centers to get answers to your questions.</p>
-                </div>
+                    <img src="{% static './images/img1.png' %}" class="img-slide">
+                    <p class="sec3-para">Join our virtual community event to share, learn and connect with like minded entrepreneurs and professionals.</p>
+                  </div>
+                
+                  <div class="mySlides fade">
+                    <img src="{% static './images/img_2.png' %}" class="img-slide">
+                    <p class="sec3-para">Visit our resources and inspiration center to get expert tips and advice.</p>
+                  </div>
+                
+                  <div class="mySlides fade">
+                    <img src="{% static './images/img_3.png' %}" class="img-slide">
+                    <p class="sec3-para">Check out our help centers to get answers to your questions.</p>
+                  </div>
               
                 <!-- Next and previous buttons -->
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -351,7 +354,7 @@
     
                 </p>
     
-                <button type="button" class="text-btn">Visit Support Center<span class="vector"><img src="/images/Vector.png"
+                <button type="button" class="text-btn">Visit Support Center<span class="vector"><img src="{% static './images/Vector.png' %}"
                             alt="vector of arrow"></span></span></button>
             </div>
 
@@ -466,9 +469,10 @@
 
 
 
-    <script src="./js/navbar.js"></script>
-    <script src="./js/section-4.js"></script>
-    <script src="./js/footer.js"></script>
+    <script src="{% static './js/navbar.js' %}"></script>
+    <script src="{% static './js/section-4.js' %}"></script>
+    <script src="{% static './js/footer.js' %}"></script>
+    
 </body>
 
 </html>
