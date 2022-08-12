@@ -8,7 +8,16 @@ from accounts.models import User
 def index(request):
     
     
-    return render(request, 'hannah template/index.html')
+    return render(request, 'editor/index.html')
 
-# Create your views here.
+
+def template(request):
+    
+    user = User.object.get(email=request.user)
+    user_website_template = user_dashboard.objects.get(user=user)
+    
+    if user_website_template.
+    
+    
+    return render(request, "")
 
