@@ -106,7 +106,7 @@
 
         <h1>Sign Up</h1>
 
-        <form method="post">
+        <form method="post" >
             {% csrf_token %}
             {{registration_form}}
             <input type="submit" name="Send email" value="Sign Up">

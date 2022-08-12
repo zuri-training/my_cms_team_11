@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import user_dashboard
+from django.contrib.auth import authenticate, login, logout
 
 from .forms import OnboardingForm
 from django.contrib import messages
@@ -19,20 +20,17 @@ def on_boarding(request):
    
     if request.session.has_key('user_email'):
         user_email = request.session['user_email']
+        user = User.object.get(email=user_email)
         context['email'] = user_email  
         if request.method == 'POST':
             
-            onboarding_form = OnboardingForm(request.POST)
-            if onboarding_form.is_valid():
-                dets = onboarding_form.save(commit=False)
-                dets.user = User.object.get(email=user_email)
-                dets.save()
-                
-                del request.session['user_email']
-                
-                return redirect('accounts:login')  
-            else:
-                messages.error(request, 'Error saving form')
+            # user_site_dets = user_dashboard.objects.create(template_style="", website_type="", user=user)
+            
+            # login(request, user)
+            
+            return redirect('webella:dashboard')  
+            # else:
+            #     messages.error(request, 'Error saving form')
             
     context['on_boarding_form'] = OnboardingForm()
 
