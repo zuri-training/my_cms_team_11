@@ -22,10 +22,10 @@
               <a class="active nav-link" href="#home">Home</a>
             </li>
             <li class="nav-li">
-              <a class="nav-link" href="./html/resume.html">Resume</a>
+              <a class="nav-link" href="{% url 'editor:hannah_resume' %}">Resume</a>
             </li>
             <li class="nav-li">
-              <a class="nav-link" href="./html/contact.html">Contact</a>
+              <a class="nav-link" href="{% url 'editor:hannah_contact' %}">Contact</a>
             </li>
           </ul>
           <div class="hamburger">
@@ -52,7 +52,7 @@
         </div>
 
         <div>
-          <img src="./images/hannah.png" alt="Hannah images" class="hannah-img">
+          <img src="{% static 'hannah template//images/hannah.png' %}" alt="Hannah images" class="hannah-img">
         </div>
         </div>
       </main>
@@ -69,9 +69,9 @@
       <section id="projects" class="projects">
         <h2 class="header-texts">Projects</h2>
         <div class="projects-div">
-          <img src="./images/project1.png" alt="Project1">
-          <img src="./images/project2.png" alt="Project2">
-          <img src="./images/project3.png" alt="Project3">
+          <img src="{% static 'hannah template/images/project1.png' %}" alt="Project1">
+          <img src="{% static 'hannah template/images/project2.png' %}" alt="Project2">
+          <img src="{% static 'hannah template/images/project3.png' %}" alt="Project3">
         </div> <hr>
       </section>
       <!-- End of projects section -->
@@ -80,19 +80,19 @@
       <footer id="footer" class="footer">
         <div class="footer-div">
           <a href="#">
-            <img src="  ./images/facebook.png" alt="facebook icon" />
+            <img src="{% static 'hannah template/images/facebook.png' %}" alt="facebook icon" />
           </a>
           <a href="#">
-            <img src="./images/twitter.png" alt="twitter icon" />
+            <img src="{% static 'hannah template/images/twitter.png' %}" alt="twitter icon" />
           </a>
           <a href="#">
-            <img src="./images/linkedln.png" alt="linkedln icon" />
+            <img src="{% static 'hannah template/images/linkedln.png' %}" alt="linkedln icon" />
           </a>
           <a href="#">
-            <img src="./images/instagram.png" alt="instagram icon" />
+            <img src="{% static 'hannah template/images/instagram.png' %}" alt="instagram icon" />
           </a>
           <a href="#">
-            <img src="./images/m.png" alt="m icon" />
+            <img src="{% static 'hannah template/images/m.png' %}" alt="m icon" />
           </a>
         </div>
         <div class="footer-p">
@@ -103,6 +103,6 @@
       <!-- End of footer section -->
     </div>
 
-    <script src="./js/navbar.js"></script>
+    <script src="{% static 'hannah template/js/navbar.js' %}"></script>
   </body>
 </html>

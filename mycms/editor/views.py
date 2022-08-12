@@ -27,3 +27,23 @@ def webiste_template(request):
     
     return render(request, html_link)
 
+
+
+def hannah_resume(request):
+    
+    return render(request, 'hannah template/resume.html')
+
+
+def hannah_contact(request):
+    
+    return render(request, 'hannah template/contact.html')
+
+
+def couple_blog(request):
+    
+    return render(request, 'couple template/blog.html')
+
+
+def couple_gallery(request):
+    
+    return render(request, 'couple template/gallery.html')
