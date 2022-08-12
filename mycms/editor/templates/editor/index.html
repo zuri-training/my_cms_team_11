@@ -28,7 +28,7 @@
             </ul>
             <img src="{% static 'editor/images/questmark.png' %}" alt="question">
             <img src="{% static 'editor/images/capture.png' %}" alt="question">
-            <button class="publish" type="button"><a>Publish</a></button>
+            <button class="publish" type="button"><a href="{% url 'editor:webiste_template' %}">Publish</a></button>
         </div>
 
 
@@ -77,7 +77,7 @@
         </div>
 
     </aside>
-    <div>
+    <div style="color: red;">
         <iframe></iframe>
     </div>
 
