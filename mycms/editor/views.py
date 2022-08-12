@@ -17,12 +17,16 @@ def webiste_template(request):
     user_website_template = user_dashboard.objects.get(user=user)
     
     html_link = ''
-    if user_website_template.website_type == "P":
+    if user_website_template.template_style == "hannah template":
         
         html_link = 'hannah template/index.html'
-    
-    else:
+        
+    elif user_website_template.template_style == "couple template":
+        
         html_link = 'couple template/index.html'
+        
+    else:
+        html_link = 'editor/index.html'
     
     
     return render(request, html_link)
