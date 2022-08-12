@@ -41,26 +41,27 @@
 
         <div class="template-container">
             <div class="row">
-                <form method="post" action="{% url 'webella:on_boarding' %}">
+                <form method="post" >
+                    {% csrf_token %}
                     <div class="cards">
                         <img src=" {% static './images/Portfolio-template 1.png' %}" alt="Portfolio template">
                         <p>Preview template <i class="fa-regular fa-arrow-up-right"></i></p>
     
-                        <button type="button" class="btn" value="nude portfolio" name="template-style">Start with this design <i
+                        <button type="submit" class="btn" value="nude portfolio" name="template-style">Start with this design <i
                             class="fa-regular fa-arrow-up-right"></i> </button>
                     </div>
                     <div class="cards">
                         <img src="{% static './images/Blog template 2.png' %}"  alt="blog template">
                         <p>Preview template <i class="fa-regular fa-arrow-up-right"></i></p>
     
-                        <button type="button" class="btn" value="blue blog" name="template-style">Start with this design <i
+                        <button type="submit" class="btn" value="blue blog" name="template-style">Start with this design <i
                             class="fa-regular fa-arrow-up-right"></i> </button>
                     </div>
                     <div class="cards">
                         <img src="{% static './images/Portfolio-template 1.png' %}"  alt="Portfolio template">
                         <p>Preview template <i class="fa-regular fa-arrow-up-right"></i></p>
     
-                        <button type="button" class="btn" value="nude portfolio" name="template-style">Start with this design <i
+                        <button type="submit" class="btn" value="nude portfolio" name="template-style">Start with this design <i
                             class="fa-regular fa-arrow-up-right"></i> </button>
                     </div>
                 </form>

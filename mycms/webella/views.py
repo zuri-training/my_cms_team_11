@@ -21,14 +21,37 @@ def on_boarding(request):
     if request.session.has_key('user_email'):
         user_email = request.session['user_email']
         user = User.object.get(email=user_email)
+        
+        blog_templates = ['blue blog']
+        portfolio_templates = ['nude portfolio']
+        
         context['email'] = user_email  
         if request.method == 'POST':
             
-            # user_site_dets = user_dashboard.objects.create(template_style="", website_type="", user=user)
+            user_template_choice = request.POST['template-style']
             
-            # login(request, user)
+            print(user_template_choice)
+            print(user_email)
             
-            return redirect('webella:dashboard')  
+            
+            if user_template_choice in blog_templates:
+                
+                t = user_dashboard(template_style=user_template_choice, website_type="B", user=user)
+                t.save()
+            
+            else:
+                
+                t = user_dashboard(template_style=user_template_choice, website_type="P", user=user)
+                t.save()
+
+            login(request, user)
+            print(request.user)
+            user_details = User.object.get(email=request.user)
+    
+            context['user_details'] = user_details
+            
+            return render(request, 'webella/dashboard.html', context)  
+        
             # else:
             #     messages.error(request, 'Error saving form')
             

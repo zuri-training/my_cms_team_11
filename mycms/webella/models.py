@@ -13,6 +13,7 @@ class user_dashboard(models.Model):
     template_style = models.CharField(max_length=200)
     website_type = models.CharField(max_length=50, choices=WEBSITE_TYPES, default='B')
     
+    
     user = models.ForeignKey("accounts.User", verbose_name=_("owner of website"), on_delete=models.CASCADE)
     
     
