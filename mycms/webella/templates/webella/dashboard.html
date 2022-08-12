@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static './css/dashboard.css' %}">
+    <title>Webella || Dashboard</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-wrapper">
+            <a href="{% url 'webella:index' %}"><span>Webella</span></a>
+
+        </div>
+        <a href="{% url 'accounts:logout' %}" >Log out</a>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <!-- Aside -->
+        <aside>
+            <div class="user-details">
+                <div class="user-image-wrapper">
+                    <img src="./Avatar.png" alt="user image">
+                </div>
+                <span>{{user_details.first_name}} {{user_details.last_name}}</span>
+            </div>
+
+            <p>Main</p>
+
+            <div class="dashboard">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.719727 9.05306H7.38639V0.719727H0.719727V9.05306ZM0.719727 15.7197H7.38639V10.7197H0.719727V15.7197ZM9.05306 15.7197H15.7197V7.38639H9.05306V15.7197ZM9.05306 0.719727V5.71973H15.7197V0.719727H9.05306Z" fill="#3F3F3F"/>
+                </svg>
+                 <span>Dashboard</span>   
+            </div>
+
+            <p>Settings</p>
+
+            <div>
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.55306 1.05306C3.55306 0.594727 3.17806 0.219727 2.71973 0.219727C2.26139 0.219727 1.88639 0.594727 1.88639 1.05306V4.38639H0.219727V9.38639H5.21973V4.38639H3.55306V1.05306ZM6.88639 12.7197C6.88639 13.8031 7.58639 14.7197 8.55306 15.0697V18.5531H10.2197V15.0697C11.1864 14.7281 11.8864 13.8114 11.8864 12.7197V11.0531H6.88639V12.7197ZM0.219727 12.7197C0.219727 13.8031 0.919727 14.7197 1.88639 15.0697V18.5531H3.55306V15.0697C4.51973 14.7197 5.21973 13.8031 5.21973 12.7197V11.0531H0.219727V12.7197ZM16.8864 4.38639V1.05306C16.8864 0.594727 16.5114 0.219727 16.0531 0.219727C15.5947 0.219727 15.2197 0.594727 15.2197 1.05306V4.38639H13.5531V9.38639H18.5531V4.38639H16.8864ZM10.2197 1.05306C10.2197 0.594727 9.84473 0.219727 9.38639 0.219727C8.92806 0.219727 8.55306 0.594727 8.55306 1.05306V4.38639H6.88639V9.38639H11.8864V4.38639H10.2197V1.05306ZM13.5531 12.7197C13.5531 13.8031 14.2531 14.7197 15.2197 15.0697V18.5531H16.8864V15.0697C17.8531 14.7281 18.5531 13.8114 18.5531 12.7197V11.0531H13.5531V12.7197Z" fill="#3F3F3F"/>
+                </svg>
+                 <span>General</span>   
+            </div>
+
+            <div>
+                <img src="./Businessbusiness.png" alt="">
+                <span>Business Information</span>    
+            </div>
+
+            <div>
+                <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.3864 7.4235C12.6697 7.4235 12.9447 7.45684 13.2197 7.4985V3.48184L6.96973 0.756836L0.719727 3.48184V7.5735C0.719727 11.3568 3.38639 14.8985 6.96973 15.7568C7.42806 15.6485 7.86973 15.4902 8.30306 15.2985C7.72806 14.4818 7.38639 13.4902 7.38639 12.4235C7.38639 9.66517 9.62806 7.4235 12.3864 7.4235Z" fill="black" fill-opacity="0.75"/>
+                </svg>   
+                <img src="./Vectoraccount.png" alt="" style="margin-left: -15px; margin-bottom: -8px;">
+                <span>Manage Account</span>   
+            </div>
+
+        </aside>
+
+        <!-- Article -->
+        <article>
+            <div class="welcome">
+                <h1>Welcome Back, {{user_details.first_name}}.</h1>
+                <a href="#" class="edit-button">Edit Website</a>
+            </div>
+
+            <div class="card card1">
+                <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value:67"></div>
+                <div>
+                    <h3>Well done! You are almost done setting up your site.</h3>
+                    <p>Don't stop now, let's get this website published.</p>
+                </div>
+            </div>
+            
+            <div class="card card2">
+                <h3> Design your Website </h3>
+                
+                <div>
+                    <span> Build your website the way you want it with Webella Content Editor. <br> 
+                        You can explore the variety of layout and color options. </span>
+                    <a href="#"> Start Designing <i class="fas fa-arrow-right" style="transform: rotate(-45deg);"></i> </a>
+                </div>
+            </div>
+            
+            <div class="card card2">
+                <h3>Setup your Site name and URL address</h3>
+                
+                <div>
+                    <span>Webella offers you the flexibility to create your unique name and URL address</span>
+                    <a href="#"> Set up <i class="fas fa-arrow-right" style="transform: rotate(-45deg);"></i> </a>
+                </div>
+            </div>
+            
+            <div class="card card2">
+                <h3>Publish your Website</h3>
+                
+                <div>
+                    <span>Ready to go live? Publish your site to get started.</span>
+                    <a href="#"> Publish <i class="fas fa-arrow-right" style="transform: rotate(-45deg);"></i> </a>
+                </div>
+            </div>
+            
+        </article>
+
+        <div class="clearfix"></div>  
+
+    </main>
+    
+</body>
+</html>

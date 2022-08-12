@@ -13,6 +13,7 @@ def register(request):
     context = {}
     if request.POST:
         registration_form = RegistrationUserForm(request.POST)
+        
         if registration_form.is_valid():
             user_email= registration_form.cleaned_data['email']
             request.session['user_email'] = user_email
@@ -43,11 +44,8 @@ def login_page(request):
                 login(request, user)
                 user_dashboard_dets = user_dashboard.objects.get(user=user)
                 
-                if user_dashboard_dets.website_type == 'B':
-                    return redirect('webella:blog_dashboard')
-                
-                elif user_dashboard_dets.website_type == 'P':
-                    return redirect('webella:portfolio_dashboard')
+            
+                return redirect('webella:dashboard')
                 
             
         else:

@@ -4,37 +4,25 @@
 */
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, hgroup, output, ruby, section, summary,
-time, mark, audio, video, * {
+ * {
 	margin: 0;
 	padding: 0;
-	border: 0;
+	/* border: 0;
 	font-size: 100%;
 	font: inherit;
-    vertical-align: baseline;
+    vertical-align: baseline; */
     box-sizing:border-box;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, hgroup, section {
+/* article, aside, details, figcaption, figure, hgroup, section {
 	display: block;
-}
-body {
+} */
+/* body {
   font-family: 'Space Grotesk', 'Lexend',-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   -webkit-font-smoothing:antialiased;
   -webkit-osx-font-smoothing:grayscale;
-}
+} */
 
 ol, ul {
 	list-style: none;
@@ -55,21 +43,25 @@ a {
   text-decoration:none;
 }
 
-
+.primary_intro_container{
+    background-color: #F5F5F5;
+    padding-top: 20px;
+}
 
 #primary_intro, #secondary_intro{
     display:flex;
     flex-direction:column;
-    margin:2em auto;
+    width: 90%;
+    margin: auto;
     overflow-x:hidden;
     min-width:320px;
-    padding-bottom:3em;
-    /* padding:2em; */
+    padding:2em;
     max-width:1440px;
 }
 
 #primary_intro{
     flex-direction:column-reverse;
+    /* width: 100%; */
 }
 
 
@@ -81,12 +73,18 @@ a {
     padding:2em;
 }
 
-.heading{
+.headingg{
 font-family: 'Lexend';
 font-style: normal;
 font-weight: 700;
-font-size: 36px;
-line-height: 101%;
+font-size: 30px;
+line-height: 1.5;
+padding-right: 15px;
+
+}
+
+.text1{
+   width: 80%;
 }
 
 .button{
@@ -106,6 +104,9 @@ line-height: 101%;
 .illustration{
     position:relative;
     display:flex;
+   height: 350px;
+   width: 300px;
+   padding: 10px;
 }
 
 img{
@@ -127,11 +128,17 @@ img{
 @media screen and (min-width:768px){
     #primary_intro, #secondary_intro{
         padding-bottom:3em;
+        width: 90%;
     }
     #primary_intro{
         flex-direction:row;
         align-items: center;
     }
+    
+    .headingg{
+        font-size: 28px;
+    }
+
     .text_content{
         flex:1;
         gap:2em;
@@ -143,19 +150,21 @@ img{
 
 @media screen and (min-width:1440px) {
     #primary_intro, #secondary_intro{
-        padding:0 4em;
-        padding-bottom:3em;
+        padding:3em;
+        width: 80%;
+        /* padding-bottom:3em; */
     }
 
     #primary_intro{
         flex-direction:row;
         align-items: center;
+        padding: 10px;
     }
     .text_content{
         flex:1;
         gap:3em;
     }
-    .heading{
+    .headingg{
         font-size: 48px;
         line-height: 62px;
     }
@@ -180,17 +189,18 @@ img{
     align-self: center;
 }
 .template_wrapper{
+    margin-top: 2em;
     display:flex;
     flex-wrap:wrap;
     justify-content: center;
-    gap:2em;
+    gap:1.3em;
     order:3;
 }
 
 .template_cards{
-    position:relative;
-    width: 384px;
-    height: 370px;
+    /* position:relative; */
+    width: 324px;
+    height: 310px;
     border: 1px solid #003865;
     border-radius: 7px 7px 0px 0px;
     overflow:hidden;
@@ -210,9 +220,9 @@ img{
         gap:3em;
     }
 
-    #secondary_intro .heading, #secondary_intro .text{
+    #secondary_intro .headingg, #secondary_intro .text{
         padding:0 2em;
-        max-width: 996px;
+        /* max-width: 996px; */
         text-align: center;
     }
     
@@ -220,7 +230,7 @@ img{
         align-self: center;
     }
     .template_wrapper{
-        margin:4em auto;
+        margin:2em auto;
     }
 }
 
@@ -233,7 +243,7 @@ img{
         gap:3em;
     }
 
-    #secondary_intro .heading, #secondary_intro .text{
+    #secondary_intro .headingg, #secondary_intro .text{
         /* padding:0 4em; */
         text-align: center;
     }
