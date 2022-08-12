@@ -1,0 +1,259 @@
+/* start of header styling */
+.main-container {
+  min-height: 100vh;
+}
+
+header {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  justify-content: space-between;
+}
+
+.nav-ul {
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+  position: fixed;
+  right: -100%;
+  width: 100%;
+  transition: 0.3s;
+  padding-left: 50px;
+}
+
+.nav-ul.active {
+  right: -65%;
+  background: var(--tertiary);
+}
+
+.logo {
+  padding: 10px;
+  font-family: var(--oleo);
+}
+
+.nav-li {
+  padding: 40px 0;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+  float: right;
+  margin: 15px;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  transition: all 0.5s ease;
+  background-color: var(--secondary);
+}
+
+.nav-link.active {
+  color: var(--others);
+}
+/* end of header styling */
+
+/* start of main styling */
+.main {
+  padding-top: 100px;
+}
+
+.header-texts {
+  text-align: center;
+}
+
+.main-flex {
+  flex-direction: column-reverse;
+  align-items: center;
+  background: var(--tertiary);
+  margin: 30px 0;
+}
+
+.message {
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  padding: 30px 0;
+}
+
+#hi {
+  font-weight: 300;
+  padding-bottom: 5px;
+}
+
+.hannah-img {
+  width: 250px;
+}
+
+.button-div {
+  margin-top: 60px;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.btn1 {
+  background-color: var(--button);
+  padding: 5px;
+  color: var(--primary);
+}
+
+.btn2 {
+  background-color: transparent;
+  padding: 5px 15px;
+  border-radius: 3px;
+  border: 1px solid var(--button);
+  color: var(--button);
+}
+/* end of main styling */
+
+/* Start of about styling */
+.about {
+  padding-top: 70px;
+}
+
+.paragraph {
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+/* End of about styling */
+
+/* Start of projects styling */
+.projects {
+  padding-top: 70px;
+}
+
+.projects-div {
+  padding: 50px 0 100px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+
+.projects-div img {
+  width: 80%;
+  cursor: pointer;
+}
+/* End of projects styling */
+
+/* Start of footer styling */
+.footer {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.footer-div a {
+  text-decoration: none;
+}
+
+.footer-div img {
+  padding: 0 10px;
+  width: 40px;
+  height: 20px;
+}
+
+.footer-p p {
+  font-size: 13px;
+  padding: 5px 0;
+}
+/* End of footer styling */
+
+/* Start of Resume styling */
+.hr {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.experience {
+  margin: 0 auto;
+  width: 95%;
+}
+
+.td-head {
+  font-weight: 900;
+}
+
+.td-para {
+  width: 40%;
+}
+
+td {
+  padding: 30px 0;
+}
+
+.td-p {
+  padding-top: 20px;
+}
+/* End of Resume styling */
+
+/* Start of Contact styling */
+.contact {
+  padding: 100px 0;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#contact-h4 {
+  padding: 70px 0;
+  text-align: center;
+}
+
+.text-div {
+  padding-top: 10px;
+}
+
+.phone-div {
+  padding-top: 25px;
+}
+
+.form-div {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 50px;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0 40px 0;
+  border-radius: 5px;
+  border: 1px solid var(--secondary);
+}
+
+.form-btn {
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+  padding: 10px;
+  background-color: var(--button);
+  color: #fff;
+  font-size: 16px;
+}
+/* End of Contact styling */
