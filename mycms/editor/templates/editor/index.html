@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content-editor</title>
+    <link rel="stylesheet" href="{% static 'editor/css/styles.css' %}" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500&family=Assistant:wght@200;300&family=Big+Shoulders+Display:wght@700&family=Chivo&family=Inter&family=Lato:wght@400;700&family=Lexend+Deca&family=Lexend:wght@400;500;600;700&family=Lobster&family=Martel+Sans&family=Merriweather+Sans:ital,wght@1,300&family=Open+Sans:wght@300;500;600;700&family=Outfit:wght@100;200;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@200;400&family=Poppins:wght@400;500;600;700&family=Quicksand:wght@300;500&family=Roboto+Flex:opsz,wght@8..144,200&family=Roboto:ital,wght@0,400;1,300&family=Rubik:ital,wght@1,300&family=Space+Grotesk:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <h1>Webbella</h1>
+        </div>
+        <div class="nav-items">
+            <img src="{% static 'editor/images/laptop.png' %}" alt="laptop">
+            <img src="{% static 'editor/images/phone.png' %}" alt="mobile">
+            <ul>
+                <li>Template options<span class="vector"><img src="{% static 'editor/images/Vector.png' %}" alt="vector"></span></li>
+            </ul>
+            <img src="{% static 'editor/images/questmark.png' %}" alt="question">
+            <img src="{% static 'editor/images/capture.png' %}" alt="question">
+            <button class="publish" type="button"><a href="{% url 'editor:webiste_template' %}">Publish</a></button>
+        </div>
+
+
+    </div>
+    <aside>
+        <ul>
+            <li><a href="#">General</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Format</a></li>
+
+        </ul>
+        <div class="flex-container">
+            <div class="row">
+                <div class="flex-box">
+                    <img src="{% static 'editor/images/txt.png' %}" alt="">
+                    <img src="{% static 'editor/images/Vectorimage.png' %}" alt="">
+
+
+                </div>
+
+                <div class="flex-box">
+                    <img src="{% static 'editor/images/txt.png' %}" alt="">
+                    <img src="{% static 'editor/images/Vectorimage.png' %}" alt="">
+
+
+                </div>
+                <div class="flex-box">
+                    <img src="{% static 'editor/images/Buttonbutton.png' %}" alt="">
+                    <img src="{% static 'editor/images/Add Linkaddlink.png' %}" alt="">
+
+                </div>
+                <div class="flex-box">
+                    <img src="{% static 'editor/images/txt.png' %}" alt="">
+                    <img src="{% static 'editor/images/Vectorimage.png' %}" alt="">
+
+
+                </div>
+                <div class="flex-box">
+                    <img src="{% static 'editor/images/txt.png' %}" alt="">
+                    <img src="{% static 'editor/images/Vectorimage.png' %}" alt="">
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </aside>
+    <div style="color: red;">
+        <iframe></iframe>
+    </div>
+
+</body>
+
+</html>

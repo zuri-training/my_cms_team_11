@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'hannah template/css/index.css' %}" />
+    <title>Hannah || Homepage</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- start of header -->
+      <header class="header">
+        <div>
+          <h1 class="logo">HANNAH</h1>
+        </div>
+
+        <nav class="nav">
+          <ul class="nav-ul">
+            <li class="nav-li">
+              <a class="active nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-li">
+              <a class="nav-link" href="{% url 'editor:hannah_resume' %}">Resume</a>
+            </li>
+            <li class="nav-li">
+              <a class="nav-link" href="{% url 'editor:hannah_contact' %}">Contact</a>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </header>
+      <!-- end of header -->
+
+      <!-- Start of main section -->
+      <main id="home" class="main">
+        <h2 class="header-texts">Product Designer</h2>
+        <div class="main-flex">
+        <div class="message">
+          <h2 id="hi">Hi there!</h1>
+          <h2>I am Hannah James</h2>
+
+          <div class="button-div">
+            <button type="button" class="btn btn1">Send a message</button>
+            <button type="button" class="btn btn2">My Projects</button>
+          </div>
+        </div>
+
+        <div>
+          <img src="{% static 'hannah template/images/hannah.png' %}" alt="Hannah images" class="hannah-img">
+        </div>
+        </div>
+      </main>
+      <!-- End of main section -->
+
+      <!-- Start of about section -->
+      <section id="about" class="about">
+        <h2 class="header-texts">About Me</h2>
+        <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia.</p>
+      </section>
+      <!-- End of about section -->
+
+      <!-- Start of projects section -->
+      <section id="projects" class="projects">
+        <h2 class="header-texts">Projects</h2>
+        <div class="projects-div">
+          <img src="{% static 'hannah template/images/project1.png' %}" alt="Project1">
+          <img src="{% static 'hannah template/images/project2.png' %}" alt="Project2">
+          <img src="{% static 'hannah template/images/project3.png' %}" alt="Project3">
+        </div> <hr>
+      </section>
+      <!-- End of projects section -->
+
+      <!-- Start of footer section -->
+      <footer id="footer" class="footer">
+        <div class="footer-div">
+          <a href="#">
+            <img src="{% static 'hannah template/images/facebook.png' %}" alt="facebook icon" />
+          </a>
+          <a href="#">
+            <img src="{% static 'hannah template/images/twitter.png' %}" alt="twitter icon" />
+          </a>
+          <a href="#">
+            <img src="{% static 'hannah template/images/linkedln.png' %}" alt="linkedln icon" />
+          </a>
+          <a href="#">
+            <img src="{% static 'hannah template/images/instagram.png' %}" alt="instagram icon" />
+          </a>
+          <a href="#">
+            <img src="{% static 'hannah template/images/m.png' %}" alt="m icon" />
+          </a>
+        </div>
+        <div class="footer-p">
+          <p>&copy; 2024 by Hannah James</p>
+          <p>Proudly created with Webella.com</p>
+        </div>
+      </footer>
+      <!-- End of footer section -->
+    </div>
+
+    <script src="{% static 'hannah template/js/navbar.js' %}"></script>
+  </body>
+</html>

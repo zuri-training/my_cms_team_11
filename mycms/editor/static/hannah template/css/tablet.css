@@ -1,0 +1,31 @@
+/* Start of header styling */
+.nav-ul.active {
+  right: -75%;
+}
+/* End of header styling */
+
+/* Start of main styling */
+.message {
+  width: 60%;
+}
+/* End of main styling */
+
+/* Start of about styling */
+.paragraph {
+  width: 70%;
+}
+/* End of about styling */
+
+/* Start of Resume styling */
+.experience {
+  width: 90%;
+}
+
+.td-para {
+  width: 60%;
+}
+/* End of Resume styling */
+
+/* Start of Contact styling */
+
+/* End of Contact styling */
