@@ -31,6 +31,8 @@ git clone https://github.com/zuri-training/my_cms_team_11.git
 - [Git Style Guide](https://udacity.github.io/git-styleguide/)
 - [Python Style Guide](https://peps.python.org/pep-0008/)
 
+##Figma link to the Hi-Fi, Low-Fi, and style guides: https://www.figma.com/file/Pl2xy3VVA3gfvvoh7pklqT/Project-my_cms-team-library
+
 
 ## 🤝 Contributing
 
