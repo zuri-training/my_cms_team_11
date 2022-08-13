@@ -42,6 +42,10 @@ def hannah_contact(request):
     
     return render(request, 'hannah template/contact.html')
 
+def hannah_index(request):
+    
+    return render(request, 'hannah template/index.html')
+
 
 def couple_blog(request):
     
@@ -51,3 +55,11 @@ def couple_blog(request):
 def couple_gallery(request):
     
     return render(request, 'couple template/gallery.html')
+
+def couple_index(request):
+    
+    return render(request, 'couple template/index.html')
+
+def editor_index(request):
+    
+    return render(request, 'editor/index.html')

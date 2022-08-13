@@ -25,7 +25,7 @@
         <aside>
             <div class="user-details">
                 <div class="user-image-wrapper">
-                    <img src="./Avatar.png" alt="user image">
+                    <img src=" {% static './images/avatar.png' %}" alt="user image">
                 </div>
                 <span>{{user_details.first_name}} {{user_details.last_name}}</span>
             </div>
@@ -84,7 +84,7 @@
                 <div>
                     <span> Build your website the way you want it with Webella Content Editor. <br> 
                         You can explore the variety of layout and color options. </span>
-                    <a href="#"> Start Designing <i class="fas fa-arrow-right" style="transform: rotate(-45deg);"></i> </a>
+                    <a href="{% url 'webella:on_boarding' %}"> Start Designing <i class="fas fa-arrow-right" style="transform: rotate(-45deg);"></i> </a>
                 </div>
             </div>
             
