@@ -8,6 +8,7 @@ from django.contrib import messages
 from accounts.models import User
 # Create your views here.
 
+user_dets = {}
 
 def index(request):
     
@@ -49,6 +50,7 @@ def on_boarding(request):
 
         
             context['user_details'] = user
+            user_dets['user'] = user
             
             return redirect('editor:index')  
         

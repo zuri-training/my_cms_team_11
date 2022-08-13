@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from webella.models import user_dashboard
 from django.contrib import messages
 from accounts.models import User
+
+from django.views.generic.base import TemplateView
 # Create your views here.
 
 
@@ -63,3 +65,22 @@ def couple_index(request):
 def editor_index(request):
     
     return render(request, 'editor/index.html')
+
+
+class PreView(TemplateView):
+    
+    # template_name = 'editor/blank.html'
+    
+    def get_template_names(self):
+        user = User.object.get(email=self.request.user)
+        user_website_template = user_dashboard.objects.get(user=user)
+        
+        if user_website_template.template_style == "hannah template":
+        
+            template_name = 'hannah template/index.html'
+        
+        else:
+        
+            template_name = 'couple template/index.html'
+    
+        return [template_name]
