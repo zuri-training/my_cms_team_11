@@ -12,6 +12,9 @@
 - Python
 - Hosted with github pages
 
+## Architecture
+Monolith (Django Templating)
+
 ### Development (Running locally)
 
 - Clone the project
