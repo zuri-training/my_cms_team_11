@@ -1,21 +1,22 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="{% static './css/dashboard.css' %}">
     <title>Webella || Dashboard</title>
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="logo-wrapper">
-            <a href="./index.html"><span>Webella</span></a>
+            <a href="{% url 'webella:index' %}"><span>Webella</span></a>
 
         </div>
-
+        <a href="{% url 'accounts:logout' %}" >Log out</a>
     </header>
 
     <!-- Main -->
@@ -24,9 +25,9 @@
         <aside>
             <div class="user-details">
                 <div class="user-image-wrapper">
-                    <img src="./Avatar.png" alt="user image">
+                    <img src=" {% static './images/avatar.png' %}" alt="user image">
                 </div>
-                <span>Andrew Smith</span>
+                <span>{{user_details.first_name}} {{user_details.last_name}}</span>
             </div>
 
             <p>Main</p>
@@ -65,14 +66,14 @@
         <!-- Article -->
         <article>
             <div class="welcome">
-                <h1>Welcome Back Andrew</h1>
-                <a href="#" class="edit-button">Edit Website</a>
+                <h1>Welcome Back, {{user_details.first_name}}.</h1>
+                <a href="{% url 'editor:index' %}" class="edit-button">Edit Website</a>
             </div>
 
             <div class="card card1">
                 <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value:67"></div>
                 <div>
-                    <h3>Welldone! You are almost done setting up your site.</h3>
+                    <h3>Well done! You are almost done setting up your site.</h3>
                     <p>Don't stop now, let's get this website published.</p>
                 </div>
             </div>
@@ -83,7 +84,7 @@
                 <div>
                     <span> Build your website the way you want it with Webella Content Editor. <br> 
                         You can explore the variety of layout and color options. </span>
-                    <a href="#"> Start Designing <i class="fas fa-arrow-right" style="transform: rotate(-45deg);"></i> </a>
+                    <a href="{% url 'webella:on_boarding' %}"> Start Designing <i class="fas fa-arrow-right" style="transform: rotate(-45deg);"></i> </a>
                 </div>
             </div>
             

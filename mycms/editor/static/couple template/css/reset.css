@@ -1,0 +1,78 @@
+/* start of general styling */
+:root {
+  --primary: #fff;
+  --secondary: #3fa0c0;
+  --tertiary: #00193b;
+  --others: #3fa0c0;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 27px;
+  letter-spacing: 2px;
+}
+/* end of general styling */
+
+/* start of common styling */
+.nav-link,
+.main-div,
+.create span,
+.btn {
+  color: var(--primary);
+}
+
+#and,
+.schedule-link a {
+  color: var(--secondary);
+}
+
+.testament-div,
+.schedule,
+footer,
+.footer-link,
+.gallery {
+  color: var(--tertiary);
+}
+
+#couple-name,
+.testament-div,
+.schedule h1,
+.gallery-text h1 {
+  font-family: "Lobster Two", cursive;
+}
+
+#date,
+.testament-div p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.nav-ul,
+.main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-link,
+#date {
+  text-transform: uppercase;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  border-bottom: 4px solid var(--secondary);
+  padding-bottom: 5px;
+}
+
+.nav-ul.active,
+.main-div,
+.testament {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* end of common styling */

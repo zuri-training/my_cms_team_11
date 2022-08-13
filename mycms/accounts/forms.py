@@ -14,7 +14,7 @@ class RegistrationUserForm(UserCreationForm):
         fields = ('first_name', 'last_name', 'email', 'password1', 'password2')
         
         widgets = {
-            'first_name': forms.TextInput(attrs={'placeholder':'First Name','name':'firstName','id':'firstName','class':'input-class_name'}),
+            'first_name': forms.TextInput(attrs={'placeholder':'First Name','name':'firstName','id':'firstName','autofocus': 'True'}),
             'last_name': forms.TextInput(attrs={'placeholder':'Last Name','name':'lastName','id':'lastName','class':'input-class_name'}),
             'email': forms.EmailInput(attrs={'placeholder':'name@example.com','name':'email','id':'email','class':'input-class_name'}),
             'password1': PasswordInput(),

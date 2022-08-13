@@ -108,20 +108,10 @@
 
         <form method="post">
             {% csrf_token %}
-<!--             <div>
-                <label for="email">Email Address</label>
-                <input type="email" name="email" id="email" placeholder="name@example.com" required> 
-            </div>
-
-            <div class="password-container">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="password" required>
-                <i class="far fa-eye" id="togglePassword"></i> 
-            </div> -->
             {{login_form}}
             <div class="check">
                 <div>
-                    <input type="checkbox" name="remember-me" id=""> <span>Remeber me</span>
+                    <input type="checkbox" name="remember-me" id=""> <span>Remember me</span>
                 </div>
                 <span><a href="{% url 'reset_password'  %}" class="blue">Forgot Password?</a></span>
             </div>

@@ -139,7 +139,7 @@
                         create and manage your website exactly the way you imagine it to be
                     </p>
 
-                    <a href=""> Create a Website <i class="fas fa-arrow-right" style="transform: rotate(-45deg);"></i></a>
+                    <a href="{% url 'accounts:register' %}"> Create a Website <i class="fas fa-arrow-right" style="transform: rotate(-45deg);"></i></a>
 
                     <p class="tryy">Try Webella now. It's free</p>
 
@@ -200,7 +200,8 @@
                         aesthetically pleasing websites
                     </p>
                     <button class="button">
-                        Build your website <i class="fas fa-arrow-right" style="transform: rotate(-45deg);"></i>
+                        <a href="{% url 'accounts:register' %}">Build your website</a>
+                        <i class="fas fa-arrow-right" style="transform: rotate(-45deg);"></i>
                     </button>
                 </div>
                 <div class="illustration">
@@ -218,20 +219,24 @@
                 are built with your business in mind
             </p>
             <button class="button">
-                Browse All Website Templates <i class="fas fa-arrow-right" style="transform: rotate(-45deg);"></i>
+                <a href="{% url 'accounts:register' %}">Browse All Website Templates</a>
+                 <i class="fas fa-arrow-right" style="transform: rotate(-45deg);"></i>
             </button>
 
             <div class="template_wrapper">
                 <div class="template_cards">
+                    
                     <img src="{% static './images/i_template_1.png' %}"alt="">
                     
                 </div>
                 <div class="template_cards">
-                    <img src="{% static './images/i_template_2.png' %}"alt="">
+                    <a href="{% url 'editor:hannah_home' %}"><img src="{% static './images/i_template_2.png' %}"alt=""></a>
+                    
                     
                 </div>
                 <div class="template_cards">
-                    <img src="{% static './images/i_template_3.png' %}"alt="">
+                    <a href="{% url 'editor:couple_home' %}"><img src="{% static './images/i_template_3.png' %}"alt=""></a>
+                    
                     
                 </div>
             </div>
