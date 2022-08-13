@@ -1,0 +1,13 @@
+{
+    "main-color": "black",
+
+    "nav-link-1-text": "Home",
+    "nav-link-2-text": "Resume",
+    "nav-link-3-text": "Contact",
+
+    "page-title": "Product Designer",
+
+    "hero-image": "link.jpg",
+    "hero-text-small": "Hi there!", 
+    "hero-text-big": "I am Hannah James"
+}

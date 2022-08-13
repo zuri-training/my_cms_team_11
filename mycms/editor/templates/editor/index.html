@@ -44,7 +44,25 @@
             </ul>
             <div class="flex-container">
                 <div class="row">
-                   
+                   <form name="hannah-landing-form" method="get" action="" onchange="">
+                    
+
+                    <label for="nav_link_1_text">Nav Link 1 text</label>
+                    <input name="nav_link_1_text" type="text" >
+
+                    <label for="nav_link_2_text">Nav Link 2 text</label>
+                    <input name="nav_link_2_text" type="text" >
+
+                    <label for="nav_link_3_text">Nav Link 3 text</label>
+                    <input name="nav_link_3_text" type="text" >
+
+                    <label for="page_title">Page Title</label>
+                    <input name="page_title" type="text" >
+
+                    <input type="button" onclick="makeChanges(this.form)" value="Save">
+
+
+                   </form>
     
                 </div>
             </div>
@@ -58,5 +76,5 @@
     </div>
 
 </body>
-
+<script src="{% static 'editor/js/hannah.js' %}"></script>
 </html>
