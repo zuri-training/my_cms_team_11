@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Content-editor</title>
     <link rel="stylesheet" href="{% static 'editor/css/styles.css' %}" type="text/css">
+    <script src="{% static 'editor/js/jquery-3.6.0.min.js' %}"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -34,54 +35,98 @@
 
 
     </div>
-    <aside>
-        <ul>
-            <li><a href="#">General</a></li>
-            <li><a href="#">Pages</a></li>
-            <li><a href="#">Format</a></li>
+    <div style="display: flex;">
+        <aside>
+            <ul>
+                <li><a href="#">General</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Format</a></li>
+    
+            </ul>
+            <div class="flex-container">
+                <div class="row">
+                   <form id="hannah-landing-form" method="post" onchange="">
+                    {% csrf_token %}
 
-        </ul>
-        <div class="flex-container">
-            <div class="row">
-                <div class="flex-box">
-                    <img src="{% static 'editor/images/txt.png' %}" alt="">
-                    <img src="{% static 'editor/images/Vectorimage.png' %}" alt="">
+                    <label for="nav_link_1_text" class="form-title">Nav Link 1 text</label><br>
+                    <input name="nav_link_1_text" type="text" ><br>
+
+                    <label for="nav_link_2_text" class="form-title">Nav Link 2 text</label><br>
+                    <input name="nav_link_2_text" type="text" ><br>
+
+                    <label for="nav_link_3_text" class="form-title">Nav Link 3 text</label><br>
+                    <input name="nav_link_3_text" type="text" ><br>
+
+                    <label for="page_title" class="form-title">Page Title</label><br>
+                    <input name="page_title" type="text" ><br>
+
+                    <label for="hero_text_small" class="form-title">small hero text</label><br>
+                    <input name="hero_text_small" type="text" ><br>
+
+                    <label for="hero_text_big" class="form-title">big hero text</label><br>
+                    <input name="hero_text_big" type="text" ><br>
+
+                    
+
+                    <input id="submit-button" type="button"  value="Save">
 
 
+                   </form>
+    
                 </div>
-
-                <div class="flex-box">
-                    <img src="{% static 'editor/images/txt.png' %}" alt="">
-                    <img src="{% static 'editor/images/Vectorimage.png' %}" alt="">
-
-
-                </div>
-                <div class="flex-box">
-                    <img src="{% static 'editor/images/Buttonbutton.png' %}" alt="">
-                    <img src="{% static 'editor/images/Add Linkaddlink.png' %}" alt="">
-
-                </div>
-                <div class="flex-box">
-                    <img src="{% static 'editor/images/txt.png' %}" alt="">
-                    <img src="{% static 'editor/images/Vectorimage.png' %}" alt="">
-
-
-                </div>
-                <div class="flex-box">
-                    <img src="{% static 'editor/images/txt.png' %}" alt="">
-                    <img src="{% static 'editor/images/Vectorimage.png' %}" alt="">
-
-
-                </div>
-
             </div>
-        </div>
-
-    </aside>
-    <div style="color: red;">
-        <iframe></iframe>
+    
+            
+        </aside>
+        {% if user_website_template.website_type != 'U' %}
+            <div style="float: right; width: 80%;">
+                <iframe width="100%" height="100%" src="{% url 'editor:preview' %}"></iframe>
+            </div>
+        {% else %}
+            <div style="float: right; width: 80%;">
+                <p>Looks like you haven't chosen a template </p>
+                <a href="{% url 'webella:on_boarding' %}">Browse through our templates </a>
+            </div>
+        {% endif %}
     </div>
 
-</body>
+</body> 
 
+<script>
+    
+    $(document).ready(function(){
+
+        $("#submit-button").click(function () {
+
+            $.ajax({
+            
+                type:'POST',
+
+                url:"{% url 'editor:postTemplateSpecs' %}",
+                data: {
+                
+                    csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
+                    nav_link_1_text:$('input[name=nav_link_1_text]').val(),
+                    nav_link_2_text:$('input[name=nav_link_2_text]').val(),
+                    nav_link_3_text:$('input[name=nav_link_3_text]').val(),
+                    page_title:$('input[name=page_title]').val(),
+                    hero_text_small:$('input[name=hero_text_small]').val(),
+                    hero_text_big:$('input[name=hero_text_big]').val(),
+                    
+
+               },
+                success: function(response){
+                    console.log(response)
+                },
+                error: function(response) {
+                    alert("Error occured!")
+                }
+            })
+        
+        })
+        
+       
+    });
+
+</script>
 </html>

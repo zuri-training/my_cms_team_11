@@ -18,7 +18,16 @@ def register(request):
             user_email= registration_form.cleaned_data['email']
             request.session['user_email'] = user_email
             registration_form.save()
+            
+            user = User.object.get(email=user_email)
+            
+            login(request, user)
+            t = user_dashboard(template_style="not declared", website_type="U", user=user)
+            t.save()
+            
+            
             messages.success(request, 'Registration successful!')
+            
             
             return redirect('webella:on_boarding')
 

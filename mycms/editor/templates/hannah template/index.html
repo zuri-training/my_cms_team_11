@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="{% static 'editor/js/jquery-3.6.0.min.js' %}"></script>
+
     <link rel="stylesheet" href="{% static 'hannah template/css/index.css' %}" />
     <title>Hannah || Homepage</title>
   </head>
@@ -19,13 +21,13 @@
         <nav class="nav">
           <ul class="nav-ul">
             <li class="nav-li">
-              <a class="active nav-link" href="{% url 'editor:hannah_home' %}">Home</a>
+              <a class="active nav-link" href="{% url 'editor:hannah_home' %}">{{ page_data.nav_text1 }} </a>
             </li>
             <li class="nav-li">
-              <a class="nav-link" href="{% url 'editor:hannah_resume' %}">Resume</a>
+              <a class="nav-link" href="{% url 'editor:hannah_resume' %}">{{ page_data.nav_text2 }}</a>
             </li>
             <li class="nav-li">
-              <a class="nav-link" href="{% url 'editor:hannah_contact' %}">Contact</a>
+              <a class="nav-link" href="{% url 'editor:hannah_contact' %}">{{ page_data.nav_text3 }}</a>
             </li>
           </ul>
           <div class="hamburger">
@@ -39,11 +41,11 @@
 
       <!-- Start of main section -->
       <main id="home" class="main">
-        <h2 class="header-texts">Product Designer</h2>
+        <h2 class="header-texts">{{ page_data.page_title}} </h2>
         <div class="main-flex">
         <div class="message">
-          <h2 id="hi">Hi there!</h1>
-          <h2>I am Hannah James</h2>
+          <h2 id="hi">{{page_data.hero_text_small}}</h1>
+          <h2>{{page_data.hero_text_big}}</h2>
 
           <div class="button-div">
             <button type="button" class="btn btn1">Send a message</button>
@@ -104,5 +106,26 @@
     </div>
 
     <script src="{% static 'hannah template/js/navbar.js' %}"></script>
+
+    <script>
+    
+      $(document).ready(function(){
+          
+        setInterval(function() {
+          $.ajax({
+            type:'GET',
+            url:"{% url 'editor:getTemplateSpecs' %}",
+            success: function(response){
+                console.log(response)
+            },
+            error: function(response) {
+                alert("Error occured!")
+            }
+        })
+        }, 2000);
+          
+      });
+  
+  </script>
   </body>
 </html>
