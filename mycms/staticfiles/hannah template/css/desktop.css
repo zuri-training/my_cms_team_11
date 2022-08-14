@@ -1,0 +1,72 @@
+/* start of header styling */
+.nav-ul {
+  justify-content: flex-end;
+  flex-direction: row;
+  left: 0;
+  padding-right: 100px;
+  min-height: 5vh;
+}
+
+.nav-ul.active {
+  background: none;
+}
+
+.logo {
+  padding: 20px 0 0 100px;
+}
+
+.nav-li {
+  padding-top: 25px;
+  margin-left: 70px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.nav-link.active {
+  color: var(--others);
+}
+/* end of header styling */
+
+/* start of main styling */
+.main-flex {
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 30px;
+}
+
+.message {
+  justify-content: center;
+  align-items: flex-start;
+  width: 25%;
+}
+
+.button-div {
+  width: 100%;
+}
+/* end of main styling */
+
+/* Start of Resume styling */
+.experience {
+  width: 80%;
+}
+/* End of Resume styling */
+
+/* Start of Contact styling */
+.form-div {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+input {
+  width: 80%;
+}
+
+textarea {
+  width: 180%;
+}
+
+.form-btn {
+  width: 20%;
+}
+/* End of Contact styling */

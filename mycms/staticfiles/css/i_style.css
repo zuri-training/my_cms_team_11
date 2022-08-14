@@ -1,0 +1,260 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+ * {
+	margin: 0;
+	padding: 0;
+	/* border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline; */
+    box-sizing:border-box;
+}
+/* HTML5 display-role reset for older browsers */
+/* article, aside, details, figcaption, figure, hgroup, section {
+	display: block;
+} */
+/* body {
+  font-family: 'Space Grotesk', 'Lexend',-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -webkit-osx-font-smoothing:grayscale;
+} */
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+  text-decoration:none;
+}
+
+.primary_intro_container{
+    background-color: #F5F5F5;
+    padding-top: 20px;
+}
+
+#primary_intro, #secondary_intro{
+    display:flex;
+    flex-direction:column;
+    width: 90%;
+    margin: auto;
+    overflow-x:hidden;
+    min-width:320px;
+    padding:2em;
+    max-width:1440px;
+}
+
+#primary_intro{
+    flex-direction:column-reverse;
+    /* width: 100%; */
+}
+
+
+
+.text_content{
+    display:flex;
+    flex-direction:column;
+    gap:1.8em;
+    padding:2em;
+}
+
+.headingg{
+font-family: 'Lexend';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 1.5;
+padding-right: 15px;
+
+}
+
+.text1{
+   width: 80%;
+}
+
+.button{
+    max-width:fit-content;
+    padding:1em 2em;
+    background: transparent;
+    border: 2px solid #003865;
+    border-radius: 7px;
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    color: #003865;
+}
+
+.illustration{
+    position:relative;
+    display:flex;
+   height: 350px;
+   width: 300px;
+   padding: 10px;
+}
+
+img{
+    width:100%;
+    height:100%;
+}
+
+@media screen and (min-width:480px){
+    #primary_intro, #secondary_intro{
+        padding:0 2em;
+        padding-bottom:3em;
+    }
+    .text_content{
+        padding:2em 0;
+    }
+}
+
+
+@media screen and (min-width:768px){
+    #primary_intro, #secondary_intro{
+        padding-bottom:3em;
+        width: 90%;
+    }
+    #primary_intro{
+        flex-direction:row;
+        align-items: center;
+    }
+    
+    .headingg{
+        font-size: 28px;
+    }
+
+    .text_content{
+        flex:1;
+        gap:2em;
+    }
+    .illustration{
+        flex:1.3;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    #primary_intro, #secondary_intro{
+        padding:3em;
+        width: 80%;
+        /* padding-bottom:3em; */
+    }
+
+    #primary_intro{
+        flex-direction:row;
+        align-items: center;
+        padding: 10px;
+    }
+    .text_content{
+        flex:1;
+        gap:3em;
+    }
+    .headingg{
+        font-size: 48px;
+        line-height: 62px;
+    }
+    .text{
+        font-size: 20px;
+    }
+    .illustration{
+        flex:1.3;
+    }
+}
+
+/* secondary intro */
+
+#secondary_intro{
+    padding:2em;
+    justify-content: center;
+    gap:1.8em;
+    text-align: center;
+}
+
+#secondary_intro .button{
+    align-self: center;
+}
+.template_wrapper{
+    margin-top: 2em;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    gap:1.3em;
+    order:3;
+}
+
+.template_cards{
+    /* position:relative; */
+    width: 324px;
+    height: 310px;
+    border: 1px solid #003865;
+    border-radius: 7px 7px 0px 0px;
+    overflow:hidden;
+}
+
+.template_cards > img{
+    height:100%;
+    object-position: left top;
+    object-fit: cover;
+}
+
+@media screen and (min-width:768px){
+    #secondary_intro{
+        padding:3em;
+        justify-content: center;
+        align-items: center;
+        gap:3em;
+    }
+
+    #secondary_intro .headingg, #secondary_intro .text{
+        padding:0 2em;
+        /* max-width: 996px; */
+        text-align: center;
+    }
+    
+    #secondary_intro .button{
+        align-self: center;
+    }
+    .template_wrapper{
+        margin:2em auto;
+    }
+}
+
+@media screen and (min-width:1440px) {
+   
+    #secondary_intro{
+        padding:3em;
+        justify-content: center;
+        align-items: center;
+        gap:3em;
+    }
+
+    #secondary_intro .headingg, #secondary_intro .text{
+        /* padding:0 4em; */
+        text-align: center;
+    }
+    
+    #secondary_intro .button{
+        order:3;
+        align-self: center;
+    }
+    .template_wrapper{
+        order:4;
+        margin:4em auto;
+    }
+}
+
