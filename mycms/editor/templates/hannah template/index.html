@@ -17,17 +17,18 @@
         <div>
           <h1 class="logo">HANNAH</h1>
         </div>
-
+        
         <nav class="nav">
           <ul class="nav-ul">
             <li class="nav-li">
-              <a class="active nav-link" href="{% url 'editor:hannah_home' %}">{{ page_data.nav_text1 }} </a>
+             
+              <a class="active nav-link" href="{% url 'editor:hannah_home' %}" id="nav_link1"> </a>
             </li>
             <li class="nav-li">
-              <a class="nav-link" href="{% url 'editor:hannah_resume' %}">{{ page_data.nav_text2 }}</a>
+              <a class="nav-link" href="{% url 'editor:hannah_resume' %}" id="nav_link2"></a>
             </li>
             <li class="nav-li">
-              <a class="nav-link" href="{% url 'editor:hannah_contact' %}">{{ page_data.nav_text3 }}</a>
+              <a class="nav-link" href="{% url 'editor:hannah_contact' %}" id="nav_link3"></a>
             </li>
           </ul>
           <div class="hamburger">
@@ -41,15 +42,17 @@
 
       <!-- Start of main section -->
       <main id="home" class="main">
-        <h2 class="header-texts">{{ page_data.page_title}} </h2>
+        <h2 class="header-texts" id="page_title"></h2>
         <div class="main-flex">
         <div class="message">
-          <h2 id="hi">{{page_data.hero_text_small}}</h1>
-          <h2>{{page_data.hero_text_big}}</h2>
+          <h2 id="hi" ></h1>
+          <h2 id="hero_text_big"></h2>
 
           <div class="button-div">
-            <button type="button" class="btn btn1">Send a message</button>
+            
+            <button type="button" class="btn btn1">Send a message </button>
             <button type="button" class="btn btn2">My Projects</button>
+            
           </div>
         </div>
 
@@ -116,13 +119,25 @@
             type:'GET',
             url:"{% url 'editor:getTemplateSpecs' %}",
             success: function(response){
-                console.log(response)
+                console.log(response["hannah_template"])
+                var template = response["hannah_template"]
+                $('#nav_link1').text(template['nav_text1'])
+                $('#nav_link2').text(template['nav_text2']) 
+                $('#nav_link3').text(template['nav_text3'])
+
+                $('#page_title').text(template['page_title'])
+
+                $('#hi').text(template['hero_text_small'])
+                $('#hero_text_big').text(template['hero_text_big'])
+
+                $('#home').css("background-color", template['background_color'])
+                $('.main-container').css("background-color", template['hero_div_color'])
             },
             error: function(response) {
                 alert("Error occured!")
             }
         })
-        }, 2000);
+        }, 500);
           
       });
   

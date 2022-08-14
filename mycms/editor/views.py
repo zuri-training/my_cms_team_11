@@ -182,6 +182,9 @@ def postTemplateSpecs(request):
     hero_text_small = request.POST.get('hero_text_small')
     hero_text_big = request.POST.get('hero_text_big')
     
+    background_color = request.POST.get('background_color')
+    hero_div_color = request.POST.get('hero_div_color')
+    
     user_specs = hannahTemplate.objects.get(user=request.user)
     
     print(user_specs)
@@ -192,6 +195,9 @@ def postTemplateSpecs(request):
     user_specs.page_title = page_title
     user_specs.hero_text_small = hero_text_small
     user_specs.hero_text_big = hero_text_big
+    
+    user_specs.background_color = background_color
+    user_specs.hero_div_color = hero_div_color
     
     user_specs.save()
 
