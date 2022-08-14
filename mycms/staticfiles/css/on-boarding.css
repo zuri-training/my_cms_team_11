@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #ffff;
+  font-family: "Lexend", sans-serif;
+}
+
+.container {
+  margin-top: 5px;
+  padding: 40px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.nav button {
+  padding: 15px 40px;
+  color: #ffff;
+  background-color: #003865;
+  border: none;
+  border-radius: 7px;
+  font-family: "Lexend", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.hero-text {
+  text-align: center;
+  font-family: "Lexend", sans-serif;
+  color: #1a1a1a;
+  margin-bottom: 100px;
+}
+
+.hero-text h1 {
+  font-weight: 700;
+  font-size: 48px;
+}
+.hero-text p {
+  color: #636363;
+  font-weight: 600;
+}
+hr {
+  border: 1px solid #a2c0fb;
+  margin: auto;
+  width: 85%;
+}
+
+.button-links ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-links ul li {
+  list-style-type: none;
+  margin: 10px 30px;
+}
+
+.button-links ul li a {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #edf3ff;
+  color: #131212cc;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.button-links ul li a:hover {
+  background-color: #003865;
+  color: #ffffff;
+}
+
+.template-container {
+  padding: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.cards{
+  text-align: center;
+}
+
+.cards img {
+  margin-bottom: 40px;
+}
+
+.cards p {
+  margin-bottom: 40px;
+  font-family: "Lexend", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  color: #003865;
+}
+
+.btn {
+  padding: 15px 40px;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Lexend", sans-serif;
+  color: #ffff;
+  background-color: #003865;
+  border: none;
+  border-radius: 7px;
+}
+
+.btn:hover {
+  background-color: #a2c0fb;
+  color: #131212cc;
+}
+
+@media screen and (max-width: 800px) {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .btn {
+    text-align: center;
+  }
+ 
+}
