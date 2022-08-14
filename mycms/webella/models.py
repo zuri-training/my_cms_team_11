@@ -7,11 +7,12 @@ class user_dashboard(models.Model):
     WEBSITE_TYPES = (
     ('B','BLOG'), 
     ('P', 'PORTFOLIO'),
+    ('U', 'UNDECLARED'),
     
     )
    
     template_style = models.CharField(max_length=200)
-    website_type = models.CharField(max_length=50, choices=WEBSITE_TYPES, default='B')
+    website_type = models.CharField(max_length=50, choices=WEBSITE_TYPES, default='U')
     
     
     user = models.ForeignKey("accounts.User", verbose_name=_("owner of website"), on_delete=models.CASCADE)

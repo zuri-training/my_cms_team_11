@@ -89,6 +89,8 @@ DATABASES = {
 
 AUTH_USER_MODEL = 'accounts.User'
 
+LOGIN_URL = 'accounts:login'
+
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -140,3 +142,6 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = "psupgb3@gmail.com"
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')  
+
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
