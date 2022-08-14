@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
 from .models import user_dashboard
+from editor.models import hannahTemplate
 from django.contrib.auth import authenticate, login, logout
+
+from django.contrib.auth.decorators import login_required
 
 from .forms import OnboardingForm
 from django.contrib import messages
@@ -10,49 +13,56 @@ from accounts.models import User
 
 user_dets = {}
 
+@login_required
 def index(request):
     
     
     return render(request, 'webella/index.html')
 
 
+@login_required
 def on_boarding(request):
     context = {}
    
-    if request.session.has_key('user_email'):
-        user_email = request.session['user_email']
-        user = User.object.get(email=user_email)
+    # if request.session.has_key('user_email'):
         
-        login(request, user)
-        print(request.user)
+    #     print(request.session)
+    #     user_email = request.session['user_email']
+    user = User.object.get(email=request.user)
+    print(request.user)
+    
+    blog_templates = ['couple template']
+    portfolio_templates = ['hannah template']
+    
+    if request.method == 'POST':
         
-        blog_templates = ['couple template']
-        portfolio_templates = ['hannah template']
+        user_template_choice = request.POST['template-style']
         
-        context['email'] = user_email  
-        if request.method == 'POST':
+        print(user_template_choice)
+        # print(user_email)
+        
+        
+        if user_template_choice in blog_templates:
             
-            user_template_choice = request.POST['template-style']
+            t = user_dashboard.objects.get(user=user)
+            t.template_style = user_template_choice
+            t.website_type = "B"
+            t.save()
+        
+        else:
             
-            print(user_template_choice)
-            print(user_email)
-            
-            
-            if user_template_choice in blog_templates:
-                
-                t = user_dashboard(template_style=user_template_choice, website_type="B", user=user)
-                t.save()
-            
-            else:
-                
-                t = user_dashboard(template_style=user_template_choice, website_type="P", user=user)
-                t.save()
+            t = user_dashboard.objects.get(user=user)
+            t.template_style = user_template_choice
+            t.website_type = "P"
+            t.save()
 
-        
-            context['user_details'] = user
-            user_dets['user'] = user
+            hannahTemplate.objects.get_or_create(user=user)
             
-            return redirect('editor:index')  
+    
+        context['user_details'] = user
+        user_dets['user'] = user
+        
+        return redirect('editor:editor_index')  
         
             # else:
             #     messages.error(request, 'Error saving form')
@@ -61,6 +71,8 @@ def on_boarding(request):
 
     return render(request, 'webella/on-boarding.html', context)
 
+
+@login_required
 def dashboard(request):
     context = {}
     print(request.user)
