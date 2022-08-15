@@ -13,10 +13,13 @@ from accounts.models import User
 
 user_dets = {}
 
-@login_required
+
 def index(request):
     
+    #webella = User.object.get_or_create(first_name="webella", last_name="webella", email="webella@gmail.com", password="Putin1234!")
+    # default = user_dashboard.objects.get_or_create(template_style="blank", website_type="U", user=webella)
     
+ 
     return render(request, 'webella/index.html')
 
 
