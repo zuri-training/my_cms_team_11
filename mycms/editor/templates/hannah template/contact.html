@@ -1,41 +1,9 @@
-<!DOCTYPE html>
+{% extends 'hannah template/base.html' %}
 {% load static %}
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'hannah template/css/index.css' %}" />
-    <title>Hannah || Contact</title>
-  </head>
-  <body>
-    <div class="main-container">
-      <!-- start of header -->
-      <header class="header">
-        <div>
-          <h1 class="logo">HANNAH</h1>
-        </div>
-
-        <nav class="nav">
-          <ul class="nav-ul">
-            <li class="nav-li">
-              <a class="active nav-link" href="{% url 'editor:hannah_home' %}">Home</a>
-            </li>
-            <li class="nav-li">
-              <a class="nav-link" href="{% url 'editor:hannah_resume' %}">Resume</a>
-            </li>
-            <li class="nav-li">
-              <a class="nav-link" href="{% url 'editor:hannah_contact' %}">Contact</a>
-            </li>
-          </ul>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </nav>
-      </header>
-      <!-- end of header -->
+{% block title %}Hannah || Contact{% endblock %}
+{% block logo %} HANNAH {% endblock %}
+  
+    {% block content %}
 
       <!-- Start of contact section -->
       <main id="contact" class="contact">
@@ -84,33 +52,4 @@
       <hr />
       <!-- End of contact section -->
 
-      <!-- Start of footer section -->
-      <footer id="footer" class="footer">
-        <div class="footer-div">
-          <a href="#">
-            <img src="../images/facebook.png" alt="facebook icon" />
-          </a>
-          <a href="#">
-            <img src="../images/twitter.png" alt="twitter icon" />
-          </a>
-          <a href="#">
-            <img src="../images/linkedln.png" alt="linkedln icon" />
-          </a>
-          <a href="#">
-            <img src="../images/instagram.png" alt="instagram icon" />
-          </a>
-          <a href="#">
-            <img src="../images/m.png" alt="m icon" />
-          </a>
-        </div>
-        <div class="footer-p">
-          <p>&copy; 2024 by Hannah James</p>
-          <p>Proudly created with Webella.com</p>
-        </div>
-      </footer>
-      <!-- End of footer section -->
-    </div>
-
-    <script src="../js/navbar.js"></script>
-  </body>
-</html>
+      {% endblock %}

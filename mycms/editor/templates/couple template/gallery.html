@@ -1,34 +1,8 @@
-<!DOCTYPE html>
+{% extends 'couple template/base.html' %}
 {% load static %}
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'couple template/css/index.css' %}" />
-    <title>Gallery Page</title>
-  </head>
-  <body>
-    <div class="main-container">
-      <header class="header-gallery">
-        <nav class="nav">
-          <ul class="nav-ul">
-            <li class="nav-li">
-              <a class="nav-link" href="{% url 'editor:couple_home' %}">Home</a>
-            </li>
-            <li class="nav-li"><a class="nav-link" href="{% url 'editor:couple_blog' %}">blog</a></li>
-            <li class="nav-li">
-              <a class="nav-link" href="{% url 'editor:couple_gallery' %}">gallery</a>
-            </li>
-          </ul>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </nav>
-      </header>
-
+{% block title %} Gallery Page {% endblock %}
+  
+{% block content %}
       <main id="gallery" class="main-gallery"></main>
 
       <section class="gallery">
@@ -52,31 +26,5 @@
         </div>
       </section>
 
-      <!-- start of footer -->
-      <footer>
-        <div class="footer-div">
-          <ul class="footer-ul">
-            <li class="footer-li">
-              <a href="../index.html" class="footer-link">Home</a>
-            </li>
-            <li class="footer-li">
-              <a href="{% url 'editor:couple_blog' %}" class="footer-link">Blog</a>
-            </li>
-            <li class="footer-li">
-              <a href="{% url 'editor:couple_gallery' %}" class="footer-link">Gallery</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-icons">
-          <img src="{% static 'couple template/images/facebook.png' %}" alt="Faceboook Icon">
-          <img src="{% static 'couple template/images/twitter.png' %}" alt="Twitter Icon">
-          <img src="{% static 'couple template/images/instagram.png' %}" alt="Instagram Icon">
-        </div>
-        <div class="create">Created by <span>Webella</span></div>
-      </footer>
-      <!-- end of footer -->
-    </div>
+{% endblock %}     
 
-    <script src="{% static 'couple template/js/navbar.js' %}"></script>
-  </body>
-</html>
