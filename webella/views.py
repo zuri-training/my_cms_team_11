@@ -13,7 +13,7 @@ from accounts.models import User
 
 user_dets = {}
 
-@login_required
+
 def index(request):
     
     
