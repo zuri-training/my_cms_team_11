@@ -14,6 +14,8 @@ from pathlib import Path
 
 import os
 from decouple import config
+import dj_database_url
+import django_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -83,8 +85,8 @@ WSGI_APPLICATION = 'mycms.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'ciba',
     }
 }
 
@@ -132,6 +134,8 @@ STATICFILES_DIRS = [BASE_DIR/'static']
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
@@ -149,3 +153,4 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
+django_heroku.settings(locals())
