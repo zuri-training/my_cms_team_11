@@ -1,0 +1,47 @@
+/* start of general styling */
+:root {
+  --primary: #f4e0e0;
+  --secondary: #000000;
+  --tertiary: #fcbbbb;
+  --others: #5f1e1e;
+  --button: #7c0303;
+  --icons1: #1d0bf1;
+  --icons2: #ff0505;
+  --oleo: "Oleo Script", cursive;
+  --inter: "Inter", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--inter);
+}
+/* end of general styling */
+
+/* start of common styling */
+.nav-link {
+  color: var(--secondary);
+}
+
+header,
+.nav-ul,
+.main-flex,
+.message,
+.button-div {
+  display: flex;
+}
+
+.main-container,
+header {
+  background: var(--primary);
+}
+
+.btn {
+  border-radius: 3px;
+  border: 1px solid var(--button);
+  cursor: pointer;
+}
+/* end of common styling */

@@ -1,0 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Oleo+Script&display=swap");
+
+@import url("./reset.a1c15cb767ac.css");
+@import url("./mobile.12b251ab1b0f.css");
+@import url("./tablet.fc79520ce305.css") screen and (min-width: 768px);
+@import url("./desktop.13872267b923.css") screen and (min-width: 992px);
