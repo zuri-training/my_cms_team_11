@@ -156,11 +156,14 @@ def getTemplateSpecs(request):
     
     try:
         specs = hannahTemplate.objects.get(user=request.user)
+
+        
     except hannahTemplate.DoesNotExist:
         specs = hannahTemplate.objects.get(user=webella)
         
 
     specs_dict = model_to_dict(specs)
+    # specs_dict['hero-img'] = specs.hero_image.url
     
     return JsonResponse({'hannah_template':specs_dict})
 
@@ -185,6 +188,8 @@ def postTemplateSpecs(request):
     background_color = request.POST.get('background_color')
     hero_div_color = request.POST.get('hero_div_color')
     
+    about_paragraph = request.POST.get('about_paragraph')
+    
     user_specs = hannahTemplate.objects.get(user=request.user)
     
     print(user_specs)
@@ -198,6 +203,8 @@ def postTemplateSpecs(request):
     
     user_specs.background_color = background_color
     user_specs.hero_div_color = hero_div_color
+    
+    user_specs.about_paragraph = about_paragraph
     
     user_specs.save()
 

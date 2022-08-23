@@ -56,7 +56,7 @@
             type:'GET',
             url:"{% url 'editor:getTemplateSpecs' %}",
             success: function(response){
-                console.log(response["hannah_template"])
+                
                 var template = response["hannah_template"]
                 $('#nav_link1').text(template['nav_text1'])
                 $('#nav_link2').text(template['nav_text2']) 
@@ -69,12 +69,13 @@
 
                 $('#home').css("background-color", template['background_color'])
                 $('.main-container').css("background-color", template['hero_div_color'])
+                $('.paragraph').text(template['about_paragraph'])
             },
             error: function(response) {
-                alert("Error occured!")
+                // alert("Error occured!")
             }
         })
-        }, 500);
+        }, 200);
           
       });
   

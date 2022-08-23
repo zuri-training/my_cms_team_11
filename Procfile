@@ -1,0 +1,1 @@
+web gunicorn mycms.wsgi:application --log-file -

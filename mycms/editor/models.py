@@ -12,13 +12,15 @@ class hannahTemplate(models.Model):
     nav_text3 = models.CharField(_("nav text 3"), max_length=50, default="Contact")
     page_title = models.CharField(_("page title"), max_length=50, default="Product Designer")
     
-    #hero-image = models.ImageField(_(""), upload_to=None, height_field=None, width_field=None, max_length=None)
+    # hero_image = models.ImageField(_("Hero image"), default='hannah.png', blank="True")
     
     hero_text_small = models.CharField(_("hero small text"), max_length=50, default="Hi there!")
     hero_text_big = models.CharField(_("hero big text"), max_length=50, default="I am Hannah James")
     
     background_color = models.CharField(_("background color"), max_length=50, default="#f4e0e0")
     hero_div_color = models.CharField(_("landing page color"), max_length=50, default="#fcbbbb")
+    
+    about_paragraph = models.TextField(_("About paragraph"), default="lorem ipsum")
     
     user = models.ForeignKey("accounts.User", verbose_name=_("owner of website"), on_delete=models.CASCADE)
     
